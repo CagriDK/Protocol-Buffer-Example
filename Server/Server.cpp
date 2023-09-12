@@ -1,7 +1,4 @@
-#include <iostream>
-#include <boost/asio.hpp>
-
-using boost::asio::ip::tcp;
+#include "Server.h"
 
 int main(int, char**){
     std::cout << "Hello, from ServerProtocolBufferP!\n";

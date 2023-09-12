@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0.0)
 include(CTest)
 enable_testing()
 
-add_executable(ServerProtocolBufferP Server.cpp)
+add_executable(ServerProtocolBufferP Server.h Server.cpp)
 
 if(WIN32)
     set(BOOST_INCLUDEDIR     "C:/boost_1_71_0/boost")
