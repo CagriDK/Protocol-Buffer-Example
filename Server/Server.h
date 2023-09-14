@@ -23,6 +23,10 @@ private:
         boost::asio::async_read_until(socket_, buf_, "\n", [this, self](boost::system::error_code ec, std::size_t length) {
             if (!ec) {
                 doWrite(length);
+                std::istream response_stream(&buf_);
+                std::string reply;
+                std::getline(response_stream, reply);
+                cout << "Readed rom Client: " << reply << endl; 
                 doRead();
             }
         });
@@ -53,6 +57,7 @@ private:
             acceptor_.async_accept([this](boost::system::error_code ec, tcp::socket socket) {
                 if (!ec) {
                     std::make_shared<Session>(std::move(socket))->start();
+                    cout<<"Socket Connected";
                 }
                 doAccept();
             });
