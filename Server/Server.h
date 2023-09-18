@@ -22,26 +22,26 @@ private:
         auto self(shared_from_this());
         boost::asio::async_read_until(socket_, buf_, "\n", [this, self](boost::system::error_code ec, std::size_t length) {
             if (!ec) {
-                doWrite(length);
                 std::istream response_stream(&buf_);
                 std::string reply;
                 std::getline(response_stream, reply);
-                cout << "Readed rom Client: " << reply << endl; 
+                cout << "Readed from Client: " << reply << endl; 
+                buf_.consume(length);
                 doRead();
             }
         });
     }
 
-    void doWrite(std::size_t length) {
-        auto self(shared_from_this());
-        // Write the exact message received back to the client
-        boost::asio::async_write(socket_, buf_.data(), 
-        [this,length, self](boost::system::error_code ec, std::size_t) {
-            if (!ec) {
-                buf_.consume(length); // Remove the written data
-            }
-        });
-    }
+    // void doWrite(std::size_t length) {
+    //     auto self(shared_from_this());
+    //     // Write the exact message received back to the client
+    //     boost::asio::async_write(socket_, buf_.data(), 
+    //     [this,length, self](boost::system::error_code ec, std::size_t) {
+    //         if (!ec) {
+    //             buf_.consume(length); // Remove the written data
+    //         }
+    //     });
+    // }
 
     tcp::socket socket_;
     boost::asio::streambuf buf_;
