@@ -19,8 +19,10 @@ public:
         for (;;) {
             
             cout << "Enter message and send to server (or 'exit' to quit): ";
-            getline(std::cin, input_message_);
+            string tempString;
+            getline(std::cin, tempString);
 
+            input_message_ = "hello";
             if (input_message_ == "exit") break;
 
             doWrite();
@@ -58,28 +60,32 @@ private:
     }
 
     void doWrite() {
-        boost::asio::async_write(socket_, boost::asio::buffer(input_message_ + "\n"), 
+        boost::asio::async_write(socket_, boost::asio::buffer(input_message_), 
             [this](boost::system::error_code ec, std::size_t) {
                 if (!ec) {
+                    cout<<"Message Sended to Server\n";
                     // ;
+                }
+                else{
+                    cout<<"error is = "<<ec.message()<<"\n";
                 }
             }
         );
     }
 
-    void doRead() {
-        boost::asio::async_read_until(socket_, response_, "\n",
-            [this](boost::system::error_code ec, std::size_t) {
-                if (!ec) {
-                    std::istream response_stream(&response_);
-                    std::string reply;
-                    std::getline(response_stream, reply);
-                    cout << "Reply from server: " << reply << endl;
-                    doRead();
-                }
-            }
-        );
-    }
+    // void doRead() {
+    //     boost::asio::async_read_until(socket_, response_, "\n",
+    //         [this](boost::system::error_code ec, std::size_t) {
+    //             if (!ec) {
+    //                 std::istream response_stream(&response_);
+    //                 std::string reply;
+    //                 std::getline(response_stream, reply);
+    //                 cout << "Reply from server: " << reply << endl;
+    //                 doRead();
+    //             }
+    //         }
+    //     );
+    // }
 
     boost::asio::io_context io_context_;
     tcp::socket socket_;

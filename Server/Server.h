@@ -20,7 +20,8 @@ class Session : public std::enable_shared_from_this<Session> {
 private:
     void doRead() {
         auto self(shared_from_this());
-        boost::asio::async_read_until(socket_, buf_, "\n", [this, self](boost::system::error_code ec, std::size_t length) {
+        string input_message_ = "hello";
+        boost::asio::async_read(socket_, buf_, boost::asio::transfer_exactly(5), [this, self](boost::system::error_code ec, std::size_t length) {
             if (!ec) {
                 std::istream response_stream(&buf_);
                 std::string reply;
