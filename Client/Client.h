@@ -3,6 +3,7 @@
 #include <iostream>
 #include <boost/asio.hpp>
 #include <thread>
+#include "ProtoFiles/ClientData.pb.h"
 
 using boost::asio::ip::tcp;
 using std::string;
@@ -22,13 +23,24 @@ public:
             string tempString;
             getline(std::cin, tempString);
 
-            input_message_ = "hello";
+            //input_message_ = "hello";
             if (input_message_ == "exit") break;
 
-            doWrite();
+            uint32_t messageSize = input_message_.size();
+            uint32_t networkOrderSize = htonl(messageSize);
+
+            std::vector<char> headerAndMessage(sizeof(networkOrderSize) + messageSize);
+            std::memcpy(headerAndMessage.data(), &networkOrderSize, sizeof(networkOrderSize));
+            std::memcpy(headerAndMessage.data() + sizeof(networkOrderSize), input_message_.data(), messageSize);
+            
+            doWrite(headerAndMessage);
             io_context_.run();
             io_context_.restart();
         }
+    }
+
+    void setMessage(std::string &data){
+        input_message_ = data;
     }
 
 private:
@@ -59,8 +71,8 @@ private:
         });
     }
 
-    void doWrite() {
-        boost::asio::async_write(socket_, boost::asio::buffer(input_message_), 
+    void doWrite(std::vector<char>& data) {
+        boost::asio::async_write(socket_, boost::asio::buffer(data), 
             [this](boost::system::error_code ec, std::size_t) {
                 if (!ec) {
                     cout<<"Message Sended to Server\n";
@@ -87,6 +99,7 @@ private:
     //     );
     // }
 
+    com::example::Client msg;
     boost::asio::io_context io_context_;
     tcp::socket socket_;
     tcp::resolver resolver_;

@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <boost/asio.hpp>
+#include "ProtoFiles/ServerData.pb.h"
 
 using boost::asio::ip::tcp;
 using boost::asio::ip::tcp;
@@ -20,7 +21,6 @@ class Session : public std::enable_shared_from_this<Session> {
 private:
     void doRead() {
         auto self(shared_from_this());
-        string input_message_ = "hello";
         boost::asio::async_read(socket_, buf_, boost::asio::transfer_exactly(5), [this, self](boost::system::error_code ec, std::size_t length) {
             if (!ec) {
                 std::istream response_stream(&buf_);
@@ -46,6 +46,7 @@ private:
 
     tcp::socket socket_;
     boost::asio::streambuf buf_;
+    com::example::Client msg;
     };
 class Server{
 public:
