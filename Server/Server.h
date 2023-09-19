@@ -22,7 +22,7 @@ private:
 void doReadHeader() {
     auto self(shared_from_this());
     
-    buf_.prepare(sizeof(uint32_t));
+    buf_.prepare(sizeof(uint32_t)); //Check buffer if valid for read
     
     boost::asio::async_read(socket_, buf_, boost::asio::transfer_exactly(sizeof(uint32_t)), 
         [this, self](boost::system::error_code ec, std::size_t length) {
@@ -32,7 +32,7 @@ void doReadHeader() {
                 is.read(reinterpret_cast<char*>(&messageSize), sizeof(uint32_t));
                 messageSize = ntohl(messageSize);
                 
-                buf_.consume(sizeof(uint32_t));  // Tüketiyoruz!
+                buf_.consume(sizeof(uint32_t));  // Emptying used buffer
                 
                 doReadBody(messageSize);
             } else {
@@ -44,7 +44,7 @@ void doReadHeader() {
 void doReadBody(std::size_t messageSize) {
     auto self(shared_from_this());
     
-    buf_.prepare(messageSize);
+    buf_.prepare(messageSize); //Check buffer if valid for read
     
     boost::asio::async_read(socket_, buf_, boost::asio::transfer_exactly(messageSize),
         [this,messageSize, self](boost::system::error_code ec, std::size_t) {
@@ -53,7 +53,7 @@ void doReadBody(std::size_t messageSize) {
                 std::vector<char> body(messageSize);
                 is.read(body.data(), messageSize);
                 
-                buf_.consume(messageSize);  // Tüketiyoruz!
+                buf_.consume(messageSize);  // Emptying used buffer
                 
                 msg.ParseFromArray(body.data(), body.size());
                 std::cout<<"== Proto message datas ==\n";
@@ -68,23 +68,6 @@ void doReadBody(std::size_t messageSize) {
             }
         });
 }
-
-
-
-
-
-
-
-    // void doWrite(std::size_t length) {
-    //     auto self(shared_from_this());
-    //     // Write the exact message received back to the client
-    //     boost::asio::async_write(socket_, buf_.data(), 
-    //     [this,length, self](boost::system::error_code ec, std::size_t) {
-    //         if (!ec) {
-    //             buf_.consume(length); // Remove the written data
-    //         }
-    //     });
-    // }
 
     tcp::socket socket_;
     boost::asio::streambuf buf_;
@@ -106,7 +89,6 @@ private:
                 doAccept();
             });
         }
-
     
 private:
     tcp::acceptor acceptor_;

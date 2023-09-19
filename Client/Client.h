@@ -23,7 +23,6 @@ public:
             string tempString;
             getline(std::cin, tempString);
 
-            //input_message_ = "hello";
             if (input_message_ == "exit") break;
 
             uint32_t messageSize = input_message_.size();
@@ -72,32 +71,8 @@ private:
     }
 
     void doWrite(std::vector<char>& data) {
-        boost::asio::async_write(socket_, boost::asio::buffer(data), 
-            [this](boost::system::error_code ec, std::size_t) {
-                if (!ec) {
-                    cout<<"Message Sended to Server\n";
-                    // ;
-                }
-                else{
-                    cout<<"error is = "<<ec.message()<<"\n";
-                }
-            }
-        );
+        boost::asio::async_write(socket_, boost::asio::buffer(data), [this](boost::system::error_code ec, std::size_t) {});
     }
-
-    // void doRead() {
-    //     boost::asio::async_read_until(socket_, response_, "\n",
-    //         [this](boost::system::error_code ec, std::size_t) {
-    //             if (!ec) {
-    //                 std::istream response_stream(&response_);
-    //                 std::string reply;
-    //                 std::getline(response_stream, reply);
-    //                 cout << "Reply from server: " << reply << endl;
-    //                 doRead();
-    //             }
-    //         }
-    //     );
-    // }
 
     com::example::Client msg;
     boost::asio::io_context io_context_;
