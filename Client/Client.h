@@ -18,7 +18,6 @@ public:
 
     void sendAndReceive() {
         for (;;) {
-            
             cout << "Enter message and send to server (or 'exit' to quit): ";
             string tempString;
             getline(std::cin, tempString);
@@ -74,7 +73,7 @@ private:
         boost::asio::async_write(socket_, boost::asio::buffer(data), [this](boost::system::error_code ec, std::size_t) {});
     }
 
-    com::example::Client msg;
+    com::example::MeasurementsMessage msg;
     boost::asio::io_context io_context_;
     tcp::socket socket_;
     tcp::resolver resolver_;
