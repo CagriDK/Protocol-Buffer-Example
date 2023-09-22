@@ -2,9 +2,48 @@ syntax = "proto3";
 
 package com.example;
 
-message Client {
-    string id = 1;
-    string name = 2;
-    int32 account_balance = 3;
-    string email = 4;
+import "google/protobuf/wrappers.proto";
+
+message MeasurementsMessage {
+    google.protobuf.Int32Value validMeasurementNumber = 1;
+
+    message MeasurementSetMessage {
+        google.protobuf.DoubleValue range = 1;
+        google.protobuf.DoubleValue azimuth = 2;
+        google.protobuf.DoubleValue elevation = 3;
+        google.protobuf.BoolValue elevationValid = 4;
+        google.protobuf.Int32Value radarId = 5;
+        google.protobuf.DoubleValue measurementTime = 6;
+        double height = 7;
+        bool heightValid = 8;
+        double rcs = 9;
+        google.protobuf.Int32Value radarDimension = 10;
+        google.protobuf.Int32Value plotID = 11;
+        double pd = 12;
+        bool pdValid = 13;
+        int32 plotType = 14;
+        int32 strength = 15;
+        double doppler = 16;
+        bool dopplerValid = 17;
+        double snr = 18;
+        int32 quality = 19;
+        bool qualityValid = 20;
+        int32 source = 21;
+        int32 fusionStatus = 22;
+        int32 mod1 = 23;
+        int32 mod2 = 24;
+        int32 mod3A = 25;
+        int32 modC = 26;
+        int32 mod4 = 27;
+        int32 modSAddress = 28;
+        repeated uint32 modSCallsign = 29 [packed=true];
+        int32 mod5Address = 30;
+        repeated uint32 mod5Callsign = 31 [packed=true];
+        repeated double resolution = 32 [packed=true];
+        bool resolutionValid = 33;
+        double reliability = 34;
+        bool reliabilityValid = 35;
+    }
+
+    repeated MeasurementSetMessage measurementsSet = 2;
 }

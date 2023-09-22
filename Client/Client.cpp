@@ -1,42 +1,42 @@
 #include "Client.h"
 
 int main(int, char**){
-    com::example::MeasurementsMessage msg;
+    com::example::MeasurementsMessage *msg = new com::example::MeasurementsMessage();
     std::string testStrings = "Hello";
     double test_array[3] = {0.0, 0.0, 0.0};
 
-    msg.mutable_validmeasurementnumber()->set_value(10);
+    msg->mutable_validmeasurementnumber()->set_value(5);
     for(size_t i = 0; i< 5 ; i++)
     {
-        com::example::MeasurementsMessage::MeasurementSetMessage *a=msg.add_measurementsset();
-        a->mutable_range()->set_value(10.0);
-        a->mutable_azimuth()->set_value(10.0);
-        a->mutable_elevation()->set_value(10.0);
+        com::example::MeasurementsMessage::MeasurementSetMessage *a=msg->add_measurementsset();
+        a->mutable_range()->set_value(10.0 + i);
+        a->mutable_azimuth()->set_value(10.0 + i);
+        a->mutable_elevation()->set_value(10.0 + i);
         a->mutable_elevationvalid()->set_value(true);
-        a->mutable_measurementtime()->set_value(10.0);
-        a->mutable_radarid()->set_value(10.0);
-        a->set_height(10.0);
+        a->mutable_measurementtime()->set_value(10.0 + i);
+        a->mutable_radarid()->set_value(10.0 + i);
+        a->set_height(10.0 + i);
         a->set_heightvalid(true);
-        a->set_rcs(10.0);
-        a->mutable_radardimension()->set_value(10);
-        a->mutable_plotid()->set_value(10);
-        a->set_pd(10.0);
+        a->set_rcs(10.0 + i);
+        a->mutable_radardimension()->set_value(10 + i);
+        a->mutable_plotid()->set_value(10 + i);
+        a->set_pd(10.0 + i);
         a->set_pdvalid(true);
-        a->set_plottype(10);
-        a->set_strength(10);
-        a->set_doppler(10.0);
+        a->set_plottype(10 + i);
+        a->set_strength(10 + i);
+        a->set_doppler(10.0 + i);
         a->set_dopplervalid(true);
-        a->set_snr(10.0);
-        a->set_quality(10);
+        a->set_snr(10.0 + i);
+        a->set_quality(10 + i);
         a->set_qualityvalid(true);
-        a->set_source(10);
-        a->set_fusionstatus(10);
-        a->set_mod1(10);
-        a->set_mod2(10);
-        a->set_mod3a(10);
-        a->set_modc(10);
-        a->set_mod4(10);
-        a->set_modsaddress(10);
+        a->set_source(10 + i);
+        a->set_fusionstatus(10 + i);
+        a->set_mod1(10 + i);
+        a->set_mod2(10 + i);
+        a->set_mod3a(10 + i);
+        a->set_modc(10 + i);
+        a->set_mod4(10 + i);
+        a->set_modsaddress(10 + i);
         
         for(char c : testStrings)
         {
@@ -59,11 +59,8 @@ int main(int, char**){
         a->set_reliabilityvalid(true);
     }
     
-    std::string dataSender = msg.SerializeAsString();
-    com::example::MeasurementsMessage msg2;
-    std::vector<char> t1(dataSender.begin(),dataSender.end());
-    msg2.ParseFromArray(t1.data(),t1.size());
-    std::cout<<"msg val = " <<msg2.measurementsset(4).height();
+    std::string dataSender = msg->SerializeAsString();
+
 
     cout << "Client is starting...\n";
     boost::asio::io_context io_context;
@@ -78,4 +75,5 @@ int main(int, char**){
     // Eğer io_context.run() durursa, sendReceiveThread'in de durmasını sağla
     sendReceiveThread.join();
 
+    delete msg;
 }

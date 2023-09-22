@@ -31,6 +31,7 @@
 #include "google/protobuf/repeated_field.h"  // IWYU pragma: export
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
 #include "google/protobuf/unknown_field_set.h"
+#include "google/protobuf/wrappers.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -52,14 +53,19 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable
     descriptor_table_ServerData_2eproto;
 namespace com {
 namespace example {
-class Client;
-struct ClientDefaultTypeInternal;
-extern ClientDefaultTypeInternal _Client_default_instance_;
+class MeasurementsMessage;
+struct MeasurementsMessageDefaultTypeInternal;
+extern MeasurementsMessageDefaultTypeInternal _MeasurementsMessage_default_instance_;
+class MeasurementsMessage_MeasurementSetMessage;
+struct MeasurementsMessage_MeasurementSetMessageDefaultTypeInternal;
+extern MeasurementsMessage_MeasurementSetMessageDefaultTypeInternal _MeasurementsMessage_MeasurementSetMessage_default_instance_;
 }  // namespace example
 }  // namespace com
 PROTOBUF_NAMESPACE_OPEN
 template <>
-::com::example::Client* Arena::CreateMaybeMessage<::com::example::Client>(Arena*);
+::com::example::MeasurementsMessage* Arena::CreateMaybeMessage<::com::example::MeasurementsMessage>(Arena*);
+template <>
+::com::example::MeasurementsMessage_MeasurementSetMessage* Arena::CreateMaybeMessage<::com::example::MeasurementsMessage_MeasurementSetMessage>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
 namespace com {
@@ -70,25 +76,25 @@ namespace example {
 
 // -------------------------------------------------------------------
 
-class Client final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:com.example.Client) */ {
+class MeasurementsMessage_MeasurementSetMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:com.example.MeasurementsMessage.MeasurementSetMessage) */ {
  public:
-  inline Client() : Client(nullptr) {}
-  ~Client() override;
+  inline MeasurementsMessage_MeasurementSetMessage() : MeasurementsMessage_MeasurementSetMessage(nullptr) {}
+  ~MeasurementsMessage_MeasurementSetMessage() override;
   template<typename = void>
-  explicit PROTOBUF_CONSTEXPR Client(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR MeasurementsMessage_MeasurementSetMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  Client(const Client& from);
-  Client(Client&& from) noexcept
-    : Client() {
+  MeasurementsMessage_MeasurementSetMessage(const MeasurementsMessage_MeasurementSetMessage& from);
+  MeasurementsMessage_MeasurementSetMessage(MeasurementsMessage_MeasurementSetMessage&& from) noexcept
+    : MeasurementsMessage_MeasurementSetMessage() {
     *this = ::std::move(from);
   }
 
-  inline Client& operator=(const Client& from) {
+  inline MeasurementsMessage_MeasurementSetMessage& operator=(const MeasurementsMessage_MeasurementSetMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Client& operator=(Client&& from) noexcept {
+  inline MeasurementsMessage_MeasurementSetMessage& operator=(MeasurementsMessage_MeasurementSetMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -118,20 +124,20 @@ class Client final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Client& default_instance() {
+  static const MeasurementsMessage_MeasurementSetMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Client* internal_default_instance() {
-    return reinterpret_cast<const Client*>(
-               &_Client_default_instance_);
+  static inline const MeasurementsMessage_MeasurementSetMessage* internal_default_instance() {
+    return reinterpret_cast<const MeasurementsMessage_MeasurementSetMessage*>(
+               &_MeasurementsMessage_MeasurementSetMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(Client& a, Client& b) {
+  friend void swap(MeasurementsMessage_MeasurementSetMessage& a, MeasurementsMessage_MeasurementSetMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(Client* other) {
+  inline void Swap(MeasurementsMessage_MeasurementSetMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -144,7 +150,7 @@ class Client final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Client* other) {
+  void UnsafeArenaSwap(MeasurementsMessage_MeasurementSetMessage* other) {
     if (other == this) return;
     ABSL_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -152,14 +158,14 @@ class Client final :
 
   // implements Message ----------------------------------------------
 
-  Client* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<Client>(arena);
+  MeasurementsMessage_MeasurementSetMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<MeasurementsMessage_MeasurementSetMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const Client& from);
+  void CopyFrom(const MeasurementsMessage_MeasurementSetMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Client& from) {
-    Client::MergeImpl(*this, from);
+  void MergeFrom( const MeasurementsMessage_MeasurementSetMessage& from) {
+    MeasurementsMessage_MeasurementSetMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -177,15 +183,15 @@ class Client final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Client* other);
+  void InternalSwap(MeasurementsMessage_MeasurementSetMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::absl::string_view FullMessageName() {
-    return "com.example.Client";
+    return "com.example.MeasurementsMessage.MeasurementSetMessage";
   }
   protected:
-  explicit Client(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit MeasurementsMessage_MeasurementSetMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   public:
 
   static const ClassData _class_data_;
@@ -198,82 +204,455 @@ class Client final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kNameFieldNumber = 2,
-    kEmailFieldNumber = 4,
-    kAccountBalanceFieldNumber = 3,
+    kModSCallsignFieldNumber = 29,
+    kMod5CallsignFieldNumber = 31,
+    kResolutionFieldNumber = 32,
+    kRangeFieldNumber = 1,
+    kAzimuthFieldNumber = 2,
+    kElevationFieldNumber = 3,
+    kElevationValidFieldNumber = 4,
+    kRadarIdFieldNumber = 5,
+    kMeasurementTimeFieldNumber = 6,
+    kRadarDimensionFieldNumber = 10,
+    kPlotIDFieldNumber = 11,
+    kHeightFieldNumber = 7,
+    kRcsFieldNumber = 9,
+    kPdFieldNumber = 12,
+    kPlotTypeFieldNumber = 14,
+    kHeightValidFieldNumber = 8,
+    kPdValidFieldNumber = 13,
+    kDopplerValidFieldNumber = 17,
+    kQualityValidFieldNumber = 20,
+    kDopplerFieldNumber = 16,
+    kStrengthFieldNumber = 15,
+    kQualityFieldNumber = 19,
+    kSnrFieldNumber = 18,
+    kSourceFieldNumber = 21,
+    kFusionStatusFieldNumber = 22,
+    kMod1FieldNumber = 23,
+    kMod2FieldNumber = 24,
+    kMod3AFieldNumber = 25,
+    kModCFieldNumber = 26,
+    kMod4FieldNumber = 27,
+    kModSAddressFieldNumber = 28,
+    kMod5AddressFieldNumber = 30,
+    kResolutionValidFieldNumber = 33,
+    kReliabilityValidFieldNumber = 35,
+    kReliabilityFieldNumber = 34,
   };
-  // string id = 1;
-  void clear_id() ;
-  const std::string& id() const;
-
-
-
-
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_id(Arg_&& arg, Args_... args);
-  std::string* mutable_id();
-  PROTOBUF_NODISCARD std::string* release_id();
-  void set_allocated_id(std::string* ptr);
-
+  // repeated uint32 modSCallsign = 29 [packed = true];
+  int modscallsign_size() const;
   private:
-  const std::string& _internal_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_id(
-      const std::string& value);
-  std::string* _internal_mutable_id();
+  int _internal_modscallsign_size() const;
 
   public:
-  // string name = 2;
-  void clear_name() ;
-  const std::string& name() const;
-
-
-
-
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_name(Arg_&& arg, Args_... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* ptr);
+  void clear_modscallsign() ;
+  ::uint32_t modscallsign(int index) const;
+  void set_modscallsign(int index, ::uint32_t value);
+  void add_modscallsign(::uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>& modscallsign() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>* mutable_modscallsign();
 
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(
-      const std::string& value);
-  std::string* _internal_mutable_name();
+  ::uint32_t _internal_modscallsign(int index) const;
+  void _internal_add_modscallsign(::uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>& _internal_modscallsign() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>* _internal_mutable_modscallsign();
 
   public:
-  // string email = 4;
-  void clear_email() ;
-  const std::string& email() const;
+  // repeated uint32 mod5Callsign = 31 [packed = true];
+  int mod5callsign_size() const;
+  private:
+  int _internal_mod5callsign_size() const;
 
-
-
-
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_email(Arg_&& arg, Args_... args);
-  std::string* mutable_email();
-  PROTOBUF_NODISCARD std::string* release_email();
-  void set_allocated_email(std::string* ptr);
+  public:
+  void clear_mod5callsign() ;
+  ::uint32_t mod5callsign(int index) const;
+  void set_mod5callsign(int index, ::uint32_t value);
+  void add_mod5callsign(::uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>& mod5callsign() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>* mutable_mod5callsign();
 
   private:
-  const std::string& _internal_email() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_email(
-      const std::string& value);
-  std::string* _internal_mutable_email();
+  ::uint32_t _internal_mod5callsign(int index) const;
+  void _internal_add_mod5callsign(::uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>& _internal_mod5callsign() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>* _internal_mutable_mod5callsign();
 
   public:
-  // int32 account_balance = 3;
-  void clear_account_balance() ;
-  ::int32_t account_balance() const;
-  void set_account_balance(::int32_t value);
+  // repeated double resolution = 32 [packed = true];
+  int resolution_size() const;
+  private:
+  int _internal_resolution_size() const;
+
+  public:
+  void clear_resolution() ;
+  double resolution(int index) const;
+  void set_resolution(int index, double value);
+  void add_resolution(double value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<double>& resolution() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<double>* mutable_resolution();
 
   private:
-  ::int32_t _internal_account_balance() const;
-  void _internal_set_account_balance(::int32_t value);
+  double _internal_resolution(int index) const;
+  void _internal_add_resolution(double value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<double>& _internal_resolution() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<double>* _internal_mutable_resolution();
 
   public:
-  // @@protoc_insertion_point(class_scope:com.example.Client)
+  // .google.protobuf.DoubleValue range = 1;
+  bool has_range() const;
+  void clear_range() ;
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue& range() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::DoubleValue* release_range();
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* mutable_range();
+  void set_allocated_range(::PROTOBUF_NAMESPACE_ID::DoubleValue* range);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue& _internal_range() const;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* _internal_mutable_range();
+  public:
+  void unsafe_arena_set_allocated_range(
+      ::PROTOBUF_NAMESPACE_ID::DoubleValue* range);
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* unsafe_arena_release_range();
+  // .google.protobuf.DoubleValue azimuth = 2;
+  bool has_azimuth() const;
+  void clear_azimuth() ;
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue& azimuth() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::DoubleValue* release_azimuth();
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* mutable_azimuth();
+  void set_allocated_azimuth(::PROTOBUF_NAMESPACE_ID::DoubleValue* azimuth);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue& _internal_azimuth() const;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* _internal_mutable_azimuth();
+  public:
+  void unsafe_arena_set_allocated_azimuth(
+      ::PROTOBUF_NAMESPACE_ID::DoubleValue* azimuth);
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* unsafe_arena_release_azimuth();
+  // .google.protobuf.DoubleValue elevation = 3;
+  bool has_elevation() const;
+  void clear_elevation() ;
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue& elevation() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::DoubleValue* release_elevation();
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* mutable_elevation();
+  void set_allocated_elevation(::PROTOBUF_NAMESPACE_ID::DoubleValue* elevation);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue& _internal_elevation() const;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* _internal_mutable_elevation();
+  public:
+  void unsafe_arena_set_allocated_elevation(
+      ::PROTOBUF_NAMESPACE_ID::DoubleValue* elevation);
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* unsafe_arena_release_elevation();
+  // .google.protobuf.BoolValue elevationValid = 4;
+  bool has_elevationvalid() const;
+  void clear_elevationvalid() ;
+  const ::PROTOBUF_NAMESPACE_ID::BoolValue& elevationvalid() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::BoolValue* release_elevationvalid();
+  ::PROTOBUF_NAMESPACE_ID::BoolValue* mutable_elevationvalid();
+  void set_allocated_elevationvalid(::PROTOBUF_NAMESPACE_ID::BoolValue* elevationvalid);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::BoolValue& _internal_elevationvalid() const;
+  ::PROTOBUF_NAMESPACE_ID::BoolValue* _internal_mutable_elevationvalid();
+  public:
+  void unsafe_arena_set_allocated_elevationvalid(
+      ::PROTOBUF_NAMESPACE_ID::BoolValue* elevationvalid);
+  ::PROTOBUF_NAMESPACE_ID::BoolValue* unsafe_arena_release_elevationvalid();
+  // .google.protobuf.Int32Value radarId = 5;
+  bool has_radarid() const;
+  void clear_radarid() ;
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value& radarid() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::Int32Value* release_radarid();
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* mutable_radarid();
+  void set_allocated_radarid(::PROTOBUF_NAMESPACE_ID::Int32Value* radarid);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value& _internal_radarid() const;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* _internal_mutable_radarid();
+  public:
+  void unsafe_arena_set_allocated_radarid(
+      ::PROTOBUF_NAMESPACE_ID::Int32Value* radarid);
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* unsafe_arena_release_radarid();
+  // .google.protobuf.DoubleValue measurementTime = 6;
+  bool has_measurementtime() const;
+  void clear_measurementtime() ;
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue& measurementtime() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::DoubleValue* release_measurementtime();
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* mutable_measurementtime();
+  void set_allocated_measurementtime(::PROTOBUF_NAMESPACE_ID::DoubleValue* measurementtime);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue& _internal_measurementtime() const;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* _internal_mutable_measurementtime();
+  public:
+  void unsafe_arena_set_allocated_measurementtime(
+      ::PROTOBUF_NAMESPACE_ID::DoubleValue* measurementtime);
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* unsafe_arena_release_measurementtime();
+  // .google.protobuf.Int32Value radarDimension = 10;
+  bool has_radardimension() const;
+  void clear_radardimension() ;
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value& radardimension() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::Int32Value* release_radardimension();
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* mutable_radardimension();
+  void set_allocated_radardimension(::PROTOBUF_NAMESPACE_ID::Int32Value* radardimension);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value& _internal_radardimension() const;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* _internal_mutable_radardimension();
+  public:
+  void unsafe_arena_set_allocated_radardimension(
+      ::PROTOBUF_NAMESPACE_ID::Int32Value* radardimension);
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* unsafe_arena_release_radardimension();
+  // .google.protobuf.Int32Value plotID = 11;
+  bool has_plotid() const;
+  void clear_plotid() ;
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value& plotid() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::Int32Value* release_plotid();
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* mutable_plotid();
+  void set_allocated_plotid(::PROTOBUF_NAMESPACE_ID::Int32Value* plotid);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value& _internal_plotid() const;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* _internal_mutable_plotid();
+  public:
+  void unsafe_arena_set_allocated_plotid(
+      ::PROTOBUF_NAMESPACE_ID::Int32Value* plotid);
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* unsafe_arena_release_plotid();
+  // double height = 7;
+  void clear_height() ;
+  double height() const;
+  void set_height(double value);
+
+  private:
+  double _internal_height() const;
+  void _internal_set_height(double value);
+
+  public:
+  // double rcs = 9;
+  void clear_rcs() ;
+  double rcs() const;
+  void set_rcs(double value);
+
+  private:
+  double _internal_rcs() const;
+  void _internal_set_rcs(double value);
+
+  public:
+  // double pd = 12;
+  void clear_pd() ;
+  double pd() const;
+  void set_pd(double value);
+
+  private:
+  double _internal_pd() const;
+  void _internal_set_pd(double value);
+
+  public:
+  // int32 plotType = 14;
+  void clear_plottype() ;
+  ::int32_t plottype() const;
+  void set_plottype(::int32_t value);
+
+  private:
+  ::int32_t _internal_plottype() const;
+  void _internal_set_plottype(::int32_t value);
+
+  public:
+  // bool heightValid = 8;
+  void clear_heightvalid() ;
+  bool heightvalid() const;
+  void set_heightvalid(bool value);
+
+  private:
+  bool _internal_heightvalid() const;
+  void _internal_set_heightvalid(bool value);
+
+  public:
+  // bool pdValid = 13;
+  void clear_pdvalid() ;
+  bool pdvalid() const;
+  void set_pdvalid(bool value);
+
+  private:
+  bool _internal_pdvalid() const;
+  void _internal_set_pdvalid(bool value);
+
+  public:
+  // bool dopplerValid = 17;
+  void clear_dopplervalid() ;
+  bool dopplervalid() const;
+  void set_dopplervalid(bool value);
+
+  private:
+  bool _internal_dopplervalid() const;
+  void _internal_set_dopplervalid(bool value);
+
+  public:
+  // bool qualityValid = 20;
+  void clear_qualityvalid() ;
+  bool qualityvalid() const;
+  void set_qualityvalid(bool value);
+
+  private:
+  bool _internal_qualityvalid() const;
+  void _internal_set_qualityvalid(bool value);
+
+  public:
+  // double doppler = 16;
+  void clear_doppler() ;
+  double doppler() const;
+  void set_doppler(double value);
+
+  private:
+  double _internal_doppler() const;
+  void _internal_set_doppler(double value);
+
+  public:
+  // int32 strength = 15;
+  void clear_strength() ;
+  ::int32_t strength() const;
+  void set_strength(::int32_t value);
+
+  private:
+  ::int32_t _internal_strength() const;
+  void _internal_set_strength(::int32_t value);
+
+  public:
+  // int32 quality = 19;
+  void clear_quality() ;
+  ::int32_t quality() const;
+  void set_quality(::int32_t value);
+
+  private:
+  ::int32_t _internal_quality() const;
+  void _internal_set_quality(::int32_t value);
+
+  public:
+  // double snr = 18;
+  void clear_snr() ;
+  double snr() const;
+  void set_snr(double value);
+
+  private:
+  double _internal_snr() const;
+  void _internal_set_snr(double value);
+
+  public:
+  // int32 source = 21;
+  void clear_source() ;
+  ::int32_t source() const;
+  void set_source(::int32_t value);
+
+  private:
+  ::int32_t _internal_source() const;
+  void _internal_set_source(::int32_t value);
+
+  public:
+  // int32 fusionStatus = 22;
+  void clear_fusionstatus() ;
+  ::int32_t fusionstatus() const;
+  void set_fusionstatus(::int32_t value);
+
+  private:
+  ::int32_t _internal_fusionstatus() const;
+  void _internal_set_fusionstatus(::int32_t value);
+
+  public:
+  // int32 mod1 = 23;
+  void clear_mod1() ;
+  ::int32_t mod1() const;
+  void set_mod1(::int32_t value);
+
+  private:
+  ::int32_t _internal_mod1() const;
+  void _internal_set_mod1(::int32_t value);
+
+  public:
+  // int32 mod2 = 24;
+  void clear_mod2() ;
+  ::int32_t mod2() const;
+  void set_mod2(::int32_t value);
+
+  private:
+  ::int32_t _internal_mod2() const;
+  void _internal_set_mod2(::int32_t value);
+
+  public:
+  // int32 mod3A = 25;
+  void clear_mod3a() ;
+  ::int32_t mod3a() const;
+  void set_mod3a(::int32_t value);
+
+  private:
+  ::int32_t _internal_mod3a() const;
+  void _internal_set_mod3a(::int32_t value);
+
+  public:
+  // int32 modC = 26;
+  void clear_modc() ;
+  ::int32_t modc() const;
+  void set_modc(::int32_t value);
+
+  private:
+  ::int32_t _internal_modc() const;
+  void _internal_set_modc(::int32_t value);
+
+  public:
+  // int32 mod4 = 27;
+  void clear_mod4() ;
+  ::int32_t mod4() const;
+  void set_mod4(::int32_t value);
+
+  private:
+  ::int32_t _internal_mod4() const;
+  void _internal_set_mod4(::int32_t value);
+
+  public:
+  // int32 modSAddress = 28;
+  void clear_modsaddress() ;
+  ::int32_t modsaddress() const;
+  void set_modsaddress(::int32_t value);
+
+  private:
+  ::int32_t _internal_modsaddress() const;
+  void _internal_set_modsaddress(::int32_t value);
+
+  public:
+  // int32 mod5Address = 30;
+  void clear_mod5address() ;
+  ::int32_t mod5address() const;
+  void set_mod5address(::int32_t value);
+
+  private:
+  ::int32_t _internal_mod5address() const;
+  void _internal_set_mod5address(::int32_t value);
+
+  public:
+  // bool resolutionValid = 33;
+  void clear_resolutionvalid() ;
+  bool resolutionvalid() const;
+  void set_resolutionvalid(bool value);
+
+  private:
+  bool _internal_resolutionvalid() const;
+  void _internal_set_resolutionvalid(bool value);
+
+  public:
+  // bool reliabilityValid = 35;
+  void clear_reliabilityvalid() ;
+  bool reliabilityvalid() const;
+  void set_reliabilityvalid(bool value);
+
+  private:
+  bool _internal_reliabilityvalid() const;
+  void _internal_set_reliabilityvalid(bool value);
+
+  public:
+  // double reliability = 34;
+  void clear_reliability() ;
+  double reliability() const;
+  void set_reliability(double value);
+
+  private:
+  double _internal_reliability() const;
+  void _internal_set_reliability(double value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:com.example.MeasurementsMessage.MeasurementSetMessage)
  private:
   class _Internal;
 
@@ -281,11 +660,229 @@ class Client final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr email_;
-    ::int32_t account_balance_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t> modscallsign_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _modscallsign_cached_byte_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t> mod5callsign_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _mod5callsign_cached_byte_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField<double> resolution_;
+    ::PROTOBUF_NAMESPACE_ID::DoubleValue* range_;
+    ::PROTOBUF_NAMESPACE_ID::DoubleValue* azimuth_;
+    ::PROTOBUF_NAMESPACE_ID::DoubleValue* elevation_;
+    ::PROTOBUF_NAMESPACE_ID::BoolValue* elevationvalid_;
+    ::PROTOBUF_NAMESPACE_ID::Int32Value* radarid_;
+    ::PROTOBUF_NAMESPACE_ID::DoubleValue* measurementtime_;
+    ::PROTOBUF_NAMESPACE_ID::Int32Value* radardimension_;
+    ::PROTOBUF_NAMESPACE_ID::Int32Value* plotid_;
+    double height_;
+    double rcs_;
+    double pd_;
+    ::int32_t plottype_;
+    bool heightvalid_;
+    bool pdvalid_;
+    bool dopplervalid_;
+    bool qualityvalid_;
+    double doppler_;
+    ::int32_t strength_;
+    ::int32_t quality_;
+    double snr_;
+    ::int32_t source_;
+    ::int32_t fusionstatus_;
+    ::int32_t mod1_;
+    ::int32_t mod2_;
+    ::int32_t mod3a_;
+    ::int32_t modc_;
+    ::int32_t mod4_;
+    ::int32_t modsaddress_;
+    ::int32_t mod5address_;
+    bool resolutionvalid_;
+    bool reliabilityvalid_;
+    double reliability_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_ServerData_2eproto;
+};// -------------------------------------------------------------------
+
+class MeasurementsMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:com.example.MeasurementsMessage) */ {
+ public:
+  inline MeasurementsMessage() : MeasurementsMessage(nullptr) {}
+  ~MeasurementsMessage() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR MeasurementsMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  MeasurementsMessage(const MeasurementsMessage& from);
+  MeasurementsMessage(MeasurementsMessage&& from) noexcept
+    : MeasurementsMessage() {
+    *this = ::std::move(from);
+  }
+
+  inline MeasurementsMessage& operator=(const MeasurementsMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline MeasurementsMessage& operator=(MeasurementsMessage&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const MeasurementsMessage& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const MeasurementsMessage* internal_default_instance() {
+    return reinterpret_cast<const MeasurementsMessage*>(
+               &_MeasurementsMessage_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(MeasurementsMessage& a, MeasurementsMessage& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(MeasurementsMessage* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(MeasurementsMessage* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  MeasurementsMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<MeasurementsMessage>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const MeasurementsMessage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const MeasurementsMessage& from) {
+    MeasurementsMessage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(MeasurementsMessage* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "com.example.MeasurementsMessage";
+  }
+  protected:
+  explicit MeasurementsMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef MeasurementsMessage_MeasurementSetMessage MeasurementSetMessage;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMeasurementsSetFieldNumber = 2,
+    kValidMeasurementNumberFieldNumber = 1,
+  };
+  // repeated .com.example.MeasurementsMessage.MeasurementSetMessage measurementsSet = 2;
+  int measurementsset_size() const;
+  private:
+  int _internal_measurementsset_size() const;
+
+  public:
+  void clear_measurementsset() ;
+  ::com::example::MeasurementsMessage_MeasurementSetMessage* mutable_measurementsset(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::com::example::MeasurementsMessage_MeasurementSetMessage >*
+      mutable_measurementsset();
+  private:
+  const ::com::example::MeasurementsMessage_MeasurementSetMessage& _internal_measurementsset(int index) const;
+  ::com::example::MeasurementsMessage_MeasurementSetMessage* _internal_add_measurementsset();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::com::example::MeasurementsMessage_MeasurementSetMessage>& _internal_measurementsset() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::com::example::MeasurementsMessage_MeasurementSetMessage>* _internal_mutable_measurementsset();
+  public:
+  const ::com::example::MeasurementsMessage_MeasurementSetMessage& measurementsset(int index) const;
+  ::com::example::MeasurementsMessage_MeasurementSetMessage* add_measurementsset();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::com::example::MeasurementsMessage_MeasurementSetMessage >&
+      measurementsset() const;
+  // .google.protobuf.Int32Value validMeasurementNumber = 1;
+  bool has_validmeasurementnumber() const;
+  void clear_validmeasurementnumber() ;
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value& validmeasurementnumber() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::Int32Value* release_validmeasurementnumber();
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* mutable_validmeasurementnumber();
+  void set_allocated_validmeasurementnumber(::PROTOBUF_NAMESPACE_ID::Int32Value* validmeasurementnumber);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value& _internal_validmeasurementnumber() const;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* _internal_mutable_validmeasurementnumber();
+  public:
+  void unsafe_arena_set_allocated_validmeasurementnumber(
+      ::PROTOBUF_NAMESPACE_ID::Int32Value* validmeasurementnumber);
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* unsafe_arena_release_validmeasurementnumber();
+  // @@protoc_insertion_point(class_scope:com.example.MeasurementsMessage)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::com::example::MeasurementsMessage_MeasurementSetMessage > measurementsset_;
+    ::PROTOBUF_NAMESPACE_ID::Int32Value* validmeasurementnumber_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_ServerData_2eproto;
@@ -305,167 +902,1426 @@ class Client final :
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
-// Client
+// MeasurementsMessage_MeasurementSetMessage
 
-// string id = 1;
-inline void Client::clear_id() {
-  _impl_.id_.ClearToEmpty();
+// .google.protobuf.DoubleValue range = 1;
+inline bool MeasurementsMessage_MeasurementSetMessage::has_range() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.range_ != nullptr);
+  return value;
 }
-inline const std::string& Client::id() const {
-  // @@protoc_insertion_point(field_get:com.example.Client.id)
-  return _internal_id();
+inline const ::PROTOBUF_NAMESPACE_ID::DoubleValue& MeasurementsMessage_MeasurementSetMessage::_internal_range() const {
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue* p = _impl_.range_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::DoubleValue&>(
+      ::PROTOBUF_NAMESPACE_ID::_DoubleValue_default_instance_);
 }
-template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void Client::set_id(Arg_&& arg,
-                                                     Args_... args) {
-  ;
-  _impl_.id_.Set(static_cast<Arg_&&>(arg), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:com.example.Client.id)
+inline const ::PROTOBUF_NAMESPACE_ID::DoubleValue& MeasurementsMessage_MeasurementSetMessage::range() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.range)
+  return _internal_range();
 }
-inline std::string* Client::mutable_id() {
-  std::string* _s = _internal_mutable_id();
-  // @@protoc_insertion_point(field_mutable:com.example.Client.id)
-  return _s;
+inline void MeasurementsMessage_MeasurementSetMessage::unsafe_arena_set_allocated_range(
+    ::PROTOBUF_NAMESPACE_ID::DoubleValue* range) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.range_);
+  }
+  _impl_.range_ = range;
+  if (range) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.range)
 }
-inline const std::string& Client::_internal_id() const {
-  return _impl_.id_.Get();
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::release_range() {
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* temp = _impl_.range_;
+  _impl_.range_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
 }
-inline void Client::_internal_set_id(const std::string& value) {
-  ;
-
-
-  _impl_.id_.Set(value, GetArenaForAllocation());
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::unsafe_arena_release_range() {
+  // @@protoc_insertion_point(field_release:com.example.MeasurementsMessage.MeasurementSetMessage.range)
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* temp = _impl_.range_;
+  _impl_.range_ = nullptr;
+  return temp;
 }
-inline std::string* Client::_internal_mutable_id() {
-  ;
-  return _impl_.id_.Mutable( GetArenaForAllocation());
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_range() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  if (_impl_.range_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::DoubleValue>(GetArenaForAllocation());
+    _impl_.range_ = p;
+  }
+  return _impl_.range_;
 }
-inline std::string* Client::release_id() {
-  // @@protoc_insertion_point(field_release:com.example.Client.id)
-  return _impl_.id_.Release();
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::mutable_range() {
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* _msg = _internal_mutable_range();
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.MeasurementSetMessage.range)
+  return _msg;
 }
-inline void Client::set_allocated_id(std::string* value) {
-  _impl_.id_.SetAllocated(value, GetArenaForAllocation());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.id_.IsDefault()) {
-          _impl_.id_.Set("", GetArenaForAllocation());
-        }
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:com.example.Client.id)
-}
-
-// string name = 2;
-inline void Client::clear_name() {
-  _impl_.name_.ClearToEmpty();
-}
-inline const std::string& Client::name() const {
-  // @@protoc_insertion_point(field_get:com.example.Client.name)
-  return _internal_name();
-}
-template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void Client::set_name(Arg_&& arg,
-                                                     Args_... args) {
-  ;
-  _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:com.example.Client.name)
-}
-inline std::string* Client::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:com.example.Client.name)
-  return _s;
-}
-inline const std::string& Client::_internal_name() const {
-  return _impl_.name_.Get();
-}
-inline void Client::_internal_set_name(const std::string& value) {
-  ;
-
-
-  _impl_.name_.Set(value, GetArenaForAllocation());
-}
-inline std::string* Client::_internal_mutable_name() {
-  ;
-  return _impl_.name_.Mutable( GetArenaForAllocation());
-}
-inline std::string* Client::release_name() {
-  // @@protoc_insertion_point(field_release:com.example.Client.name)
-  return _impl_.name_.Release();
-}
-inline void Client::set_allocated_name(std::string* value) {
-  _impl_.name_.SetAllocated(value, GetArenaForAllocation());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.name_.IsDefault()) {
-          _impl_.name_.Set("", GetArenaForAllocation());
-        }
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:com.example.Client.name)
+inline void MeasurementsMessage_MeasurementSetMessage::set_allocated_range(::PROTOBUF_NAMESPACE_ID::DoubleValue* range) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.range_);
+  }
+  if (range) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(range));
+    if (message_arena != submessage_arena) {
+      range = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, range, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.range_ = range;
+  // @@protoc_insertion_point(field_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.range)
 }
 
-// int32 account_balance = 3;
-inline void Client::clear_account_balance() {
-  _impl_.account_balance_ = 0;
+// .google.protobuf.DoubleValue azimuth = 2;
+inline bool MeasurementsMessage_MeasurementSetMessage::has_azimuth() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.azimuth_ != nullptr);
+  return value;
 }
-inline ::int32_t Client::account_balance() const {
-  // @@protoc_insertion_point(field_get:com.example.Client.account_balance)
-  return _internal_account_balance();
+inline const ::PROTOBUF_NAMESPACE_ID::DoubleValue& MeasurementsMessage_MeasurementSetMessage::_internal_azimuth() const {
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue* p = _impl_.azimuth_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::DoubleValue&>(
+      ::PROTOBUF_NAMESPACE_ID::_DoubleValue_default_instance_);
 }
-inline void Client::set_account_balance(::int32_t value) {
-  _internal_set_account_balance(value);
-  // @@protoc_insertion_point(field_set:com.example.Client.account_balance)
+inline const ::PROTOBUF_NAMESPACE_ID::DoubleValue& MeasurementsMessage_MeasurementSetMessage::azimuth() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.azimuth)
+  return _internal_azimuth();
 }
-inline ::int32_t Client::_internal_account_balance() const {
-  return _impl_.account_balance_;
+inline void MeasurementsMessage_MeasurementSetMessage::unsafe_arena_set_allocated_azimuth(
+    ::PROTOBUF_NAMESPACE_ID::DoubleValue* azimuth) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.azimuth_);
+  }
+  _impl_.azimuth_ = azimuth;
+  if (azimuth) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.azimuth)
 }
-inline void Client::_internal_set_account_balance(::int32_t value) {
-  ;
-  _impl_.account_balance_ = value;
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::release_azimuth() {
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* temp = _impl_.azimuth_;
+  _impl_.azimuth_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::unsafe_arena_release_azimuth() {
+  // @@protoc_insertion_point(field_release:com.example.MeasurementsMessage.MeasurementSetMessage.azimuth)
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* temp = _impl_.azimuth_;
+  _impl_.azimuth_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_azimuth() {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  if (_impl_.azimuth_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::DoubleValue>(GetArenaForAllocation());
+    _impl_.azimuth_ = p;
+  }
+  return _impl_.azimuth_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::mutable_azimuth() {
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* _msg = _internal_mutable_azimuth();
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.MeasurementSetMessage.azimuth)
+  return _msg;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_allocated_azimuth(::PROTOBUF_NAMESPACE_ID::DoubleValue* azimuth) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.azimuth_);
+  }
+  if (azimuth) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(azimuth));
+    if (message_arena != submessage_arena) {
+      azimuth = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, azimuth, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.azimuth_ = azimuth;
+  // @@protoc_insertion_point(field_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.azimuth)
 }
 
-// string email = 4;
-inline void Client::clear_email() {
-  _impl_.email_.ClearToEmpty();
+// .google.protobuf.DoubleValue elevation = 3;
+inline bool MeasurementsMessage_MeasurementSetMessage::has_elevation() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.elevation_ != nullptr);
+  return value;
 }
-inline const std::string& Client::email() const {
-  // @@protoc_insertion_point(field_get:com.example.Client.email)
-  return _internal_email();
+inline const ::PROTOBUF_NAMESPACE_ID::DoubleValue& MeasurementsMessage_MeasurementSetMessage::_internal_elevation() const {
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue* p = _impl_.elevation_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::DoubleValue&>(
+      ::PROTOBUF_NAMESPACE_ID::_DoubleValue_default_instance_);
 }
-template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void Client::set_email(Arg_&& arg,
-                                                     Args_... args) {
-  ;
-  _impl_.email_.Set(static_cast<Arg_&&>(arg), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:com.example.Client.email)
+inline const ::PROTOBUF_NAMESPACE_ID::DoubleValue& MeasurementsMessage_MeasurementSetMessage::elevation() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.elevation)
+  return _internal_elevation();
 }
-inline std::string* Client::mutable_email() {
-  std::string* _s = _internal_mutable_email();
-  // @@protoc_insertion_point(field_mutable:com.example.Client.email)
-  return _s;
+inline void MeasurementsMessage_MeasurementSetMessage::unsafe_arena_set_allocated_elevation(
+    ::PROTOBUF_NAMESPACE_ID::DoubleValue* elevation) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.elevation_);
+  }
+  _impl_.elevation_ = elevation;
+  if (elevation) {
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.elevation)
 }
-inline const std::string& Client::_internal_email() const {
-  return _impl_.email_.Get();
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::release_elevation() {
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* temp = _impl_.elevation_;
+  _impl_.elevation_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
 }
-inline void Client::_internal_set_email(const std::string& value) {
-  ;
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::unsafe_arena_release_elevation() {
+  // @@protoc_insertion_point(field_release:com.example.MeasurementsMessage.MeasurementSetMessage.elevation)
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* temp = _impl_.elevation_;
+  _impl_.elevation_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_elevation() {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  if (_impl_.elevation_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::DoubleValue>(GetArenaForAllocation());
+    _impl_.elevation_ = p;
+  }
+  return _impl_.elevation_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::mutable_elevation() {
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* _msg = _internal_mutable_elevation();
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.MeasurementSetMessage.elevation)
+  return _msg;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_allocated_elevation(::PROTOBUF_NAMESPACE_ID::DoubleValue* elevation) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.elevation_);
+  }
+  if (elevation) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(elevation));
+    if (message_arena != submessage_arena) {
+      elevation = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, elevation, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  _impl_.elevation_ = elevation;
+  // @@protoc_insertion_point(field_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.elevation)
+}
 
+// .google.protobuf.BoolValue elevationValid = 4;
+inline bool MeasurementsMessage_MeasurementSetMessage::has_elevationvalid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.elevationvalid_ != nullptr);
+  return value;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::BoolValue& MeasurementsMessage_MeasurementSetMessage::_internal_elevationvalid() const {
+  const ::PROTOBUF_NAMESPACE_ID::BoolValue* p = _impl_.elevationvalid_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::BoolValue&>(
+      ::PROTOBUF_NAMESPACE_ID::_BoolValue_default_instance_);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::BoolValue& MeasurementsMessage_MeasurementSetMessage::elevationvalid() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.elevationValid)
+  return _internal_elevationvalid();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::unsafe_arena_set_allocated_elevationvalid(
+    ::PROTOBUF_NAMESPACE_ID::BoolValue* elevationvalid) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.elevationvalid_);
+  }
+  _impl_.elevationvalid_ = elevationvalid;
+  if (elevationvalid) {
+    _impl_._has_bits_[0] |= 0x00000008u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000008u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.elevationValid)
+}
+inline ::PROTOBUF_NAMESPACE_ID::BoolValue* MeasurementsMessage_MeasurementSetMessage::release_elevationvalid() {
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  ::PROTOBUF_NAMESPACE_ID::BoolValue* temp = _impl_.elevationvalid_;
+  _impl_.elevationvalid_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::BoolValue* MeasurementsMessage_MeasurementSetMessage::unsafe_arena_release_elevationvalid() {
+  // @@protoc_insertion_point(field_release:com.example.MeasurementsMessage.MeasurementSetMessage.elevationValid)
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  ::PROTOBUF_NAMESPACE_ID::BoolValue* temp = _impl_.elevationvalid_;
+  _impl_.elevationvalid_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::BoolValue* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_elevationvalid() {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  if (_impl_.elevationvalid_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::BoolValue>(GetArenaForAllocation());
+    _impl_.elevationvalid_ = p;
+  }
+  return _impl_.elevationvalid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::BoolValue* MeasurementsMessage_MeasurementSetMessage::mutable_elevationvalid() {
+  ::PROTOBUF_NAMESPACE_ID::BoolValue* _msg = _internal_mutable_elevationvalid();
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.MeasurementSetMessage.elevationValid)
+  return _msg;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_allocated_elevationvalid(::PROTOBUF_NAMESPACE_ID::BoolValue* elevationvalid) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.elevationvalid_);
+  }
+  if (elevationvalid) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(elevationvalid));
+    if (message_arena != submessage_arena) {
+      elevationvalid = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, elevationvalid, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000008u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000008u;
+  }
+  _impl_.elevationvalid_ = elevationvalid;
+  // @@protoc_insertion_point(field_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.elevationValid)
+}
 
-  _impl_.email_.Set(value, GetArenaForAllocation());
+// .google.protobuf.Int32Value radarId = 5;
+inline bool MeasurementsMessage_MeasurementSetMessage::has_radarid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.radarid_ != nullptr);
+  return value;
 }
-inline std::string* Client::_internal_mutable_email() {
+inline const ::PROTOBUF_NAMESPACE_ID::Int32Value& MeasurementsMessage_MeasurementSetMessage::_internal_radarid() const {
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value* p = _impl_.radarid_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Int32Value&>(
+      ::PROTOBUF_NAMESPACE_ID::_Int32Value_default_instance_);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Int32Value& MeasurementsMessage_MeasurementSetMessage::radarid() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.radarId)
+  return _internal_radarid();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::unsafe_arena_set_allocated_radarid(
+    ::PROTOBUF_NAMESPACE_ID::Int32Value* radarid) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.radarid_);
+  }
+  _impl_.radarid_ = radarid;
+  if (radarid) {
+    _impl_._has_bits_[0] |= 0x00000010u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000010u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.radarId)
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::release_radarid() {
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* temp = _impl_.radarid_;
+  _impl_.radarid_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::unsafe_arena_release_radarid() {
+  // @@protoc_insertion_point(field_release:com.example.MeasurementsMessage.MeasurementSetMessage.radarId)
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* temp = _impl_.radarid_;
+  _impl_.radarid_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_radarid() {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  if (_impl_.radarid_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::Int32Value>(GetArenaForAllocation());
+    _impl_.radarid_ = p;
+  }
+  return _impl_.radarid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::mutable_radarid() {
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* _msg = _internal_mutable_radarid();
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.MeasurementSetMessage.radarId)
+  return _msg;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_allocated_radarid(::PROTOBUF_NAMESPACE_ID::Int32Value* radarid) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.radarid_);
+  }
+  if (radarid) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(radarid));
+    if (message_arena != submessage_arena) {
+      radarid = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, radarid, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000010u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000010u;
+  }
+  _impl_.radarid_ = radarid;
+  // @@protoc_insertion_point(field_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.radarId)
+}
+
+// .google.protobuf.DoubleValue measurementTime = 6;
+inline bool MeasurementsMessage_MeasurementSetMessage::has_measurementtime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.measurementtime_ != nullptr);
+  return value;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::DoubleValue& MeasurementsMessage_MeasurementSetMessage::_internal_measurementtime() const {
+  const ::PROTOBUF_NAMESPACE_ID::DoubleValue* p = _impl_.measurementtime_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::DoubleValue&>(
+      ::PROTOBUF_NAMESPACE_ID::_DoubleValue_default_instance_);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::DoubleValue& MeasurementsMessage_MeasurementSetMessage::measurementtime() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.measurementTime)
+  return _internal_measurementtime();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::unsafe_arena_set_allocated_measurementtime(
+    ::PROTOBUF_NAMESPACE_ID::DoubleValue* measurementtime) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.measurementtime_);
+  }
+  _impl_.measurementtime_ = measurementtime;
+  if (measurementtime) {
+    _impl_._has_bits_[0] |= 0x00000020u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000020u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.measurementTime)
+}
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::release_measurementtime() {
+  _impl_._has_bits_[0] &= ~0x00000020u;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* temp = _impl_.measurementtime_;
+  _impl_.measurementtime_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::unsafe_arena_release_measurementtime() {
+  // @@protoc_insertion_point(field_release:com.example.MeasurementsMessage.MeasurementSetMessage.measurementTime)
+  _impl_._has_bits_[0] &= ~0x00000020u;
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* temp = _impl_.measurementtime_;
+  _impl_.measurementtime_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_measurementtime() {
+  _impl_._has_bits_[0] |= 0x00000020u;
+  if (_impl_.measurementtime_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::DoubleValue>(GetArenaForAllocation());
+    _impl_.measurementtime_ = p;
+  }
+  return _impl_.measurementtime_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::DoubleValue* MeasurementsMessage_MeasurementSetMessage::mutable_measurementtime() {
+  ::PROTOBUF_NAMESPACE_ID::DoubleValue* _msg = _internal_mutable_measurementtime();
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.MeasurementSetMessage.measurementTime)
+  return _msg;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_allocated_measurementtime(::PROTOBUF_NAMESPACE_ID::DoubleValue* measurementtime) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.measurementtime_);
+  }
+  if (measurementtime) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(measurementtime));
+    if (message_arena != submessage_arena) {
+      measurementtime = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, measurementtime, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000020u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000020u;
+  }
+  _impl_.measurementtime_ = measurementtime;
+  // @@protoc_insertion_point(field_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.measurementTime)
+}
+
+// double height = 7;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_height() {
+  _impl_.height_ = 0;
+}
+inline double MeasurementsMessage_MeasurementSetMessage::height() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.height)
+  return _internal_height();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_height(double value) {
+  _internal_set_height(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.height)
+}
+inline double MeasurementsMessage_MeasurementSetMessage::_internal_height() const {
+  return _impl_.height_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_height(double value) {
   ;
-  return _impl_.email_.Mutable( GetArenaForAllocation());
+  _impl_.height_ = value;
 }
-inline std::string* Client::release_email() {
-  // @@protoc_insertion_point(field_release:com.example.Client.email)
-  return _impl_.email_.Release();
+
+// bool heightValid = 8;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_heightvalid() {
+  _impl_.heightvalid_ = false;
 }
-inline void Client::set_allocated_email(std::string* value) {
-  _impl_.email_.SetAllocated(value, GetArenaForAllocation());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.email_.IsDefault()) {
-          _impl_.email_.Set("", GetArenaForAllocation());
-        }
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:com.example.Client.email)
+inline bool MeasurementsMessage_MeasurementSetMessage::heightvalid() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.heightValid)
+  return _internal_heightvalid();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_heightvalid(bool value) {
+  _internal_set_heightvalid(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.heightValid)
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::_internal_heightvalid() const {
+  return _impl_.heightvalid_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_heightvalid(bool value) {
+  ;
+  _impl_.heightvalid_ = value;
+}
+
+// double rcs = 9;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_rcs() {
+  _impl_.rcs_ = 0;
+}
+inline double MeasurementsMessage_MeasurementSetMessage::rcs() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.rcs)
+  return _internal_rcs();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_rcs(double value) {
+  _internal_set_rcs(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.rcs)
+}
+inline double MeasurementsMessage_MeasurementSetMessage::_internal_rcs() const {
+  return _impl_.rcs_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_rcs(double value) {
+  ;
+  _impl_.rcs_ = value;
+}
+
+// .google.protobuf.Int32Value radarDimension = 10;
+inline bool MeasurementsMessage_MeasurementSetMessage::has_radardimension() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.radardimension_ != nullptr);
+  return value;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Int32Value& MeasurementsMessage_MeasurementSetMessage::_internal_radardimension() const {
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value* p = _impl_.radardimension_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Int32Value&>(
+      ::PROTOBUF_NAMESPACE_ID::_Int32Value_default_instance_);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Int32Value& MeasurementsMessage_MeasurementSetMessage::radardimension() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.radarDimension)
+  return _internal_radardimension();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::unsafe_arena_set_allocated_radardimension(
+    ::PROTOBUF_NAMESPACE_ID::Int32Value* radardimension) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.radardimension_);
+  }
+  _impl_.radardimension_ = radardimension;
+  if (radardimension) {
+    _impl_._has_bits_[0] |= 0x00000040u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000040u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.radarDimension)
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::release_radardimension() {
+  _impl_._has_bits_[0] &= ~0x00000040u;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* temp = _impl_.radardimension_;
+  _impl_.radardimension_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::unsafe_arena_release_radardimension() {
+  // @@protoc_insertion_point(field_release:com.example.MeasurementsMessage.MeasurementSetMessage.radarDimension)
+  _impl_._has_bits_[0] &= ~0x00000040u;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* temp = _impl_.radardimension_;
+  _impl_.radardimension_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_radardimension() {
+  _impl_._has_bits_[0] |= 0x00000040u;
+  if (_impl_.radardimension_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::Int32Value>(GetArenaForAllocation());
+    _impl_.radardimension_ = p;
+  }
+  return _impl_.radardimension_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::mutable_radardimension() {
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* _msg = _internal_mutable_radardimension();
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.MeasurementSetMessage.radarDimension)
+  return _msg;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_allocated_radardimension(::PROTOBUF_NAMESPACE_ID::Int32Value* radardimension) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.radardimension_);
+  }
+  if (radardimension) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(radardimension));
+    if (message_arena != submessage_arena) {
+      radardimension = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, radardimension, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000040u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000040u;
+  }
+  _impl_.radardimension_ = radardimension;
+  // @@protoc_insertion_point(field_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.radarDimension)
+}
+
+// .google.protobuf.Int32Value plotID = 11;
+inline bool MeasurementsMessage_MeasurementSetMessage::has_plotid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.plotid_ != nullptr);
+  return value;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Int32Value& MeasurementsMessage_MeasurementSetMessage::_internal_plotid() const {
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value* p = _impl_.plotid_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Int32Value&>(
+      ::PROTOBUF_NAMESPACE_ID::_Int32Value_default_instance_);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Int32Value& MeasurementsMessage_MeasurementSetMessage::plotid() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.plotID)
+  return _internal_plotid();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::unsafe_arena_set_allocated_plotid(
+    ::PROTOBUF_NAMESPACE_ID::Int32Value* plotid) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.plotid_);
+  }
+  _impl_.plotid_ = plotid;
+  if (plotid) {
+    _impl_._has_bits_[0] |= 0x00000080u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000080u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.plotID)
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::release_plotid() {
+  _impl_._has_bits_[0] &= ~0x00000080u;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* temp = _impl_.plotid_;
+  _impl_.plotid_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::unsafe_arena_release_plotid() {
+  // @@protoc_insertion_point(field_release:com.example.MeasurementsMessage.MeasurementSetMessage.plotID)
+  _impl_._has_bits_[0] &= ~0x00000080u;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* temp = _impl_.plotid_;
+  _impl_.plotid_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_plotid() {
+  _impl_._has_bits_[0] |= 0x00000080u;
+  if (_impl_.plotid_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::Int32Value>(GetArenaForAllocation());
+    _impl_.plotid_ = p;
+  }
+  return _impl_.plotid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage_MeasurementSetMessage::mutable_plotid() {
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* _msg = _internal_mutable_plotid();
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.MeasurementSetMessage.plotID)
+  return _msg;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_allocated_plotid(::PROTOBUF_NAMESPACE_ID::Int32Value* plotid) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.plotid_);
+  }
+  if (plotid) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(plotid));
+    if (message_arena != submessage_arena) {
+      plotid = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, plotid, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000080u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000080u;
+  }
+  _impl_.plotid_ = plotid;
+  // @@protoc_insertion_point(field_set_allocated:com.example.MeasurementsMessage.MeasurementSetMessage.plotID)
+}
+
+// double pd = 12;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_pd() {
+  _impl_.pd_ = 0;
+}
+inline double MeasurementsMessage_MeasurementSetMessage::pd() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.pd)
+  return _internal_pd();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_pd(double value) {
+  _internal_set_pd(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.pd)
+}
+inline double MeasurementsMessage_MeasurementSetMessage::_internal_pd() const {
+  return _impl_.pd_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_pd(double value) {
+  ;
+  _impl_.pd_ = value;
+}
+
+// bool pdValid = 13;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_pdvalid() {
+  _impl_.pdvalid_ = false;
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::pdvalid() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.pdValid)
+  return _internal_pdvalid();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_pdvalid(bool value) {
+  _internal_set_pdvalid(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.pdValid)
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::_internal_pdvalid() const {
+  return _impl_.pdvalid_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_pdvalid(bool value) {
+  ;
+  _impl_.pdvalid_ = value;
+}
+
+// int32 plotType = 14;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_plottype() {
+  _impl_.plottype_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::plottype() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.plotType)
+  return _internal_plottype();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_plottype(::int32_t value) {
+  _internal_set_plottype(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.plotType)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_plottype() const {
+  return _impl_.plottype_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_plottype(::int32_t value) {
+  ;
+  _impl_.plottype_ = value;
+}
+
+// int32 strength = 15;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_strength() {
+  _impl_.strength_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::strength() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.strength)
+  return _internal_strength();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_strength(::int32_t value) {
+  _internal_set_strength(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.strength)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_strength() const {
+  return _impl_.strength_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_strength(::int32_t value) {
+  ;
+  _impl_.strength_ = value;
+}
+
+// double doppler = 16;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_doppler() {
+  _impl_.doppler_ = 0;
+}
+inline double MeasurementsMessage_MeasurementSetMessage::doppler() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.doppler)
+  return _internal_doppler();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_doppler(double value) {
+  _internal_set_doppler(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.doppler)
+}
+inline double MeasurementsMessage_MeasurementSetMessage::_internal_doppler() const {
+  return _impl_.doppler_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_doppler(double value) {
+  ;
+  _impl_.doppler_ = value;
+}
+
+// bool dopplerValid = 17;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_dopplervalid() {
+  _impl_.dopplervalid_ = false;
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::dopplervalid() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.dopplerValid)
+  return _internal_dopplervalid();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_dopplervalid(bool value) {
+  _internal_set_dopplervalid(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.dopplerValid)
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::_internal_dopplervalid() const {
+  return _impl_.dopplervalid_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_dopplervalid(bool value) {
+  ;
+  _impl_.dopplervalid_ = value;
+}
+
+// double snr = 18;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_snr() {
+  _impl_.snr_ = 0;
+}
+inline double MeasurementsMessage_MeasurementSetMessage::snr() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.snr)
+  return _internal_snr();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_snr(double value) {
+  _internal_set_snr(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.snr)
+}
+inline double MeasurementsMessage_MeasurementSetMessage::_internal_snr() const {
+  return _impl_.snr_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_snr(double value) {
+  ;
+  _impl_.snr_ = value;
+}
+
+// int32 quality = 19;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_quality() {
+  _impl_.quality_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::quality() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.quality)
+  return _internal_quality();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_quality(::int32_t value) {
+  _internal_set_quality(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.quality)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_quality() const {
+  return _impl_.quality_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_quality(::int32_t value) {
+  ;
+  _impl_.quality_ = value;
+}
+
+// bool qualityValid = 20;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_qualityvalid() {
+  _impl_.qualityvalid_ = false;
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::qualityvalid() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.qualityValid)
+  return _internal_qualityvalid();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_qualityvalid(bool value) {
+  _internal_set_qualityvalid(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.qualityValid)
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::_internal_qualityvalid() const {
+  return _impl_.qualityvalid_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_qualityvalid(bool value) {
+  ;
+  _impl_.qualityvalid_ = value;
+}
+
+// int32 source = 21;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_source() {
+  _impl_.source_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::source() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.source)
+  return _internal_source();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_source(::int32_t value) {
+  _internal_set_source(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.source)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_source() const {
+  return _impl_.source_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_source(::int32_t value) {
+  ;
+  _impl_.source_ = value;
+}
+
+// int32 fusionStatus = 22;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_fusionstatus() {
+  _impl_.fusionstatus_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::fusionstatus() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.fusionStatus)
+  return _internal_fusionstatus();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_fusionstatus(::int32_t value) {
+  _internal_set_fusionstatus(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.fusionStatus)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_fusionstatus() const {
+  return _impl_.fusionstatus_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_fusionstatus(::int32_t value) {
+  ;
+  _impl_.fusionstatus_ = value;
+}
+
+// int32 mod1 = 23;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_mod1() {
+  _impl_.mod1_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::mod1() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.mod1)
+  return _internal_mod1();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_mod1(::int32_t value) {
+  _internal_set_mod1(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.mod1)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_mod1() const {
+  return _impl_.mod1_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_mod1(::int32_t value) {
+  ;
+  _impl_.mod1_ = value;
+}
+
+// int32 mod2 = 24;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_mod2() {
+  _impl_.mod2_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::mod2() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.mod2)
+  return _internal_mod2();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_mod2(::int32_t value) {
+  _internal_set_mod2(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.mod2)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_mod2() const {
+  return _impl_.mod2_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_mod2(::int32_t value) {
+  ;
+  _impl_.mod2_ = value;
+}
+
+// int32 mod3A = 25;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_mod3a() {
+  _impl_.mod3a_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::mod3a() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.mod3A)
+  return _internal_mod3a();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_mod3a(::int32_t value) {
+  _internal_set_mod3a(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.mod3A)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_mod3a() const {
+  return _impl_.mod3a_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_mod3a(::int32_t value) {
+  ;
+  _impl_.mod3a_ = value;
+}
+
+// int32 modC = 26;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_modc() {
+  _impl_.modc_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::modc() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.modC)
+  return _internal_modc();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_modc(::int32_t value) {
+  _internal_set_modc(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.modC)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_modc() const {
+  return _impl_.modc_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_modc(::int32_t value) {
+  ;
+  _impl_.modc_ = value;
+}
+
+// int32 mod4 = 27;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_mod4() {
+  _impl_.mod4_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::mod4() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.mod4)
+  return _internal_mod4();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_mod4(::int32_t value) {
+  _internal_set_mod4(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.mod4)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_mod4() const {
+  return _impl_.mod4_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_mod4(::int32_t value) {
+  ;
+  _impl_.mod4_ = value;
+}
+
+// int32 modSAddress = 28;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_modsaddress() {
+  _impl_.modsaddress_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::modsaddress() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.modSAddress)
+  return _internal_modsaddress();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_modsaddress(::int32_t value) {
+  _internal_set_modsaddress(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.modSAddress)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_modsaddress() const {
+  return _impl_.modsaddress_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_modsaddress(::int32_t value) {
+  ;
+  _impl_.modsaddress_ = value;
+}
+
+// repeated uint32 modSCallsign = 29 [packed = true];
+inline int MeasurementsMessage_MeasurementSetMessage::_internal_modscallsign_size() const {
+  return _impl_.modscallsign_.size();
+}
+inline int MeasurementsMessage_MeasurementSetMessage::modscallsign_size() const {
+  return _internal_modscallsign_size();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::clear_modscallsign() {
+  _internal_mutable_modscallsign()->Clear();
+}
+inline ::uint32_t MeasurementsMessage_MeasurementSetMessage::modscallsign(int index) const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.modSCallsign)
+  return _internal_modscallsign(index);
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_modscallsign(int index, ::uint32_t value) {
+  _internal_mutable_modscallsign()->Set(index, value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.modSCallsign)
+}
+inline void MeasurementsMessage_MeasurementSetMessage::add_modscallsign(::uint32_t value) {
+  _internal_add_modscallsign(value);
+  // @@protoc_insertion_point(field_add:com.example.MeasurementsMessage.MeasurementSetMessage.modSCallsign)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>& MeasurementsMessage_MeasurementSetMessage::modscallsign() const {
+  // @@protoc_insertion_point(field_list:com.example.MeasurementsMessage.MeasurementSetMessage.modSCallsign)
+  return _internal_modscallsign();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>* MeasurementsMessage_MeasurementSetMessage::mutable_modscallsign() {
+  // @@protoc_insertion_point(field_mutable_list:com.example.MeasurementsMessage.MeasurementSetMessage.modSCallsign)
+  return _internal_mutable_modscallsign();
+}
+
+inline ::uint32_t MeasurementsMessage_MeasurementSetMessage::_internal_modscallsign(int index) const {
+  return _internal_modscallsign().Get(index);
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_add_modscallsign(::uint32_t value) {
+  _internal_mutable_modscallsign()->Add(value);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>& MeasurementsMessage_MeasurementSetMessage::_internal_modscallsign() const {
+  return _impl_.modscallsign_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_modscallsign() {
+  return &_impl_.modscallsign_;
+}
+
+// int32 mod5Address = 30;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_mod5address() {
+  _impl_.mod5address_ = 0;
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::mod5address() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.mod5Address)
+  return _internal_mod5address();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_mod5address(::int32_t value) {
+  _internal_set_mod5address(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.mod5Address)
+}
+inline ::int32_t MeasurementsMessage_MeasurementSetMessage::_internal_mod5address() const {
+  return _impl_.mod5address_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_mod5address(::int32_t value) {
+  ;
+  _impl_.mod5address_ = value;
+}
+
+// repeated uint32 mod5Callsign = 31 [packed = true];
+inline int MeasurementsMessage_MeasurementSetMessage::_internal_mod5callsign_size() const {
+  return _impl_.mod5callsign_.size();
+}
+inline int MeasurementsMessage_MeasurementSetMessage::mod5callsign_size() const {
+  return _internal_mod5callsign_size();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::clear_mod5callsign() {
+  _internal_mutable_mod5callsign()->Clear();
+}
+inline ::uint32_t MeasurementsMessage_MeasurementSetMessage::mod5callsign(int index) const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.mod5Callsign)
+  return _internal_mod5callsign(index);
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_mod5callsign(int index, ::uint32_t value) {
+  _internal_mutable_mod5callsign()->Set(index, value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.mod5Callsign)
+}
+inline void MeasurementsMessage_MeasurementSetMessage::add_mod5callsign(::uint32_t value) {
+  _internal_add_mod5callsign(value);
+  // @@protoc_insertion_point(field_add:com.example.MeasurementsMessage.MeasurementSetMessage.mod5Callsign)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>& MeasurementsMessage_MeasurementSetMessage::mod5callsign() const {
+  // @@protoc_insertion_point(field_list:com.example.MeasurementsMessage.MeasurementSetMessage.mod5Callsign)
+  return _internal_mod5callsign();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>* MeasurementsMessage_MeasurementSetMessage::mutable_mod5callsign() {
+  // @@protoc_insertion_point(field_mutable_list:com.example.MeasurementsMessage.MeasurementSetMessage.mod5Callsign)
+  return _internal_mutable_mod5callsign();
+}
+
+inline ::uint32_t MeasurementsMessage_MeasurementSetMessage::_internal_mod5callsign(int index) const {
+  return _internal_mod5callsign().Get(index);
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_add_mod5callsign(::uint32_t value) {
+  _internal_mutable_mod5callsign()->Add(value);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>& MeasurementsMessage_MeasurementSetMessage::_internal_mod5callsign() const {
+  return _impl_.mod5callsign_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<::uint32_t>* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_mod5callsign() {
+  return &_impl_.mod5callsign_;
+}
+
+// repeated double resolution = 32 [packed = true];
+inline int MeasurementsMessage_MeasurementSetMessage::_internal_resolution_size() const {
+  return _impl_.resolution_.size();
+}
+inline int MeasurementsMessage_MeasurementSetMessage::resolution_size() const {
+  return _internal_resolution_size();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::clear_resolution() {
+  _internal_mutable_resolution()->Clear();
+}
+inline double MeasurementsMessage_MeasurementSetMessage::resolution(int index) const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.resolution)
+  return _internal_resolution(index);
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_resolution(int index, double value) {
+  _internal_mutable_resolution()->Set(index, value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.resolution)
+}
+inline void MeasurementsMessage_MeasurementSetMessage::add_resolution(double value) {
+  _internal_add_resolution(value);
+  // @@protoc_insertion_point(field_add:com.example.MeasurementsMessage.MeasurementSetMessage.resolution)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<double>& MeasurementsMessage_MeasurementSetMessage::resolution() const {
+  // @@protoc_insertion_point(field_list:com.example.MeasurementsMessage.MeasurementSetMessage.resolution)
+  return _internal_resolution();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<double>* MeasurementsMessage_MeasurementSetMessage::mutable_resolution() {
+  // @@protoc_insertion_point(field_mutable_list:com.example.MeasurementsMessage.MeasurementSetMessage.resolution)
+  return _internal_mutable_resolution();
+}
+
+inline double MeasurementsMessage_MeasurementSetMessage::_internal_resolution(int index) const {
+  return _internal_resolution().Get(index);
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_add_resolution(double value) {
+  _internal_mutable_resolution()->Add(value);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<double>& MeasurementsMessage_MeasurementSetMessage::_internal_resolution() const {
+  return _impl_.resolution_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<double>* MeasurementsMessage_MeasurementSetMessage::_internal_mutable_resolution() {
+  return &_impl_.resolution_;
+}
+
+// bool resolutionValid = 33;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_resolutionvalid() {
+  _impl_.resolutionvalid_ = false;
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::resolutionvalid() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.resolutionValid)
+  return _internal_resolutionvalid();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_resolutionvalid(bool value) {
+  _internal_set_resolutionvalid(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.resolutionValid)
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::_internal_resolutionvalid() const {
+  return _impl_.resolutionvalid_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_resolutionvalid(bool value) {
+  ;
+  _impl_.resolutionvalid_ = value;
+}
+
+// double reliability = 34;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_reliability() {
+  _impl_.reliability_ = 0;
+}
+inline double MeasurementsMessage_MeasurementSetMessage::reliability() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.reliability)
+  return _internal_reliability();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_reliability(double value) {
+  _internal_set_reliability(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.reliability)
+}
+inline double MeasurementsMessage_MeasurementSetMessage::_internal_reliability() const {
+  return _impl_.reliability_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_reliability(double value) {
+  ;
+  _impl_.reliability_ = value;
+}
+
+// bool reliabilityValid = 35;
+inline void MeasurementsMessage_MeasurementSetMessage::clear_reliabilityvalid() {
+  _impl_.reliabilityvalid_ = false;
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::reliabilityvalid() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.MeasurementSetMessage.reliabilityValid)
+  return _internal_reliabilityvalid();
+}
+inline void MeasurementsMessage_MeasurementSetMessage::set_reliabilityvalid(bool value) {
+  _internal_set_reliabilityvalid(value);
+  // @@protoc_insertion_point(field_set:com.example.MeasurementsMessage.MeasurementSetMessage.reliabilityValid)
+}
+inline bool MeasurementsMessage_MeasurementSetMessage::_internal_reliabilityvalid() const {
+  return _impl_.reliabilityvalid_;
+}
+inline void MeasurementsMessage_MeasurementSetMessage::_internal_set_reliabilityvalid(bool value) {
+  ;
+  _impl_.reliabilityvalid_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// MeasurementsMessage
+
+// .google.protobuf.Int32Value validMeasurementNumber = 1;
+inline bool MeasurementsMessage::has_validmeasurementnumber() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.validmeasurementnumber_ != nullptr);
+  return value;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Int32Value& MeasurementsMessage::_internal_validmeasurementnumber() const {
+  const ::PROTOBUF_NAMESPACE_ID::Int32Value* p = _impl_.validmeasurementnumber_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Int32Value&>(
+      ::PROTOBUF_NAMESPACE_ID::_Int32Value_default_instance_);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Int32Value& MeasurementsMessage::validmeasurementnumber() const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.validMeasurementNumber)
+  return _internal_validmeasurementnumber();
+}
+inline void MeasurementsMessage::unsafe_arena_set_allocated_validmeasurementnumber(
+    ::PROTOBUF_NAMESPACE_ID::Int32Value* validmeasurementnumber) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.validmeasurementnumber_);
+  }
+  _impl_.validmeasurementnumber_ = validmeasurementnumber;
+  if (validmeasurementnumber) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.example.MeasurementsMessage.validMeasurementNumber)
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage::release_validmeasurementnumber() {
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* temp = _impl_.validmeasurementnumber_;
+  _impl_.validmeasurementnumber_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage::unsafe_arena_release_validmeasurementnumber() {
+  // @@protoc_insertion_point(field_release:com.example.MeasurementsMessage.validMeasurementNumber)
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* temp = _impl_.validmeasurementnumber_;
+  _impl_.validmeasurementnumber_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage::_internal_mutable_validmeasurementnumber() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  if (_impl_.validmeasurementnumber_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::Int32Value>(GetArenaForAllocation());
+    _impl_.validmeasurementnumber_ = p;
+  }
+  return _impl_.validmeasurementnumber_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Int32Value* MeasurementsMessage::mutable_validmeasurementnumber() {
+  ::PROTOBUF_NAMESPACE_ID::Int32Value* _msg = _internal_mutable_validmeasurementnumber();
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.validMeasurementNumber)
+  return _msg;
+}
+inline void MeasurementsMessage::set_allocated_validmeasurementnumber(::PROTOBUF_NAMESPACE_ID::Int32Value* validmeasurementnumber) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.validmeasurementnumber_);
+  }
+  if (validmeasurementnumber) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(validmeasurementnumber));
+    if (message_arena != submessage_arena) {
+      validmeasurementnumber = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, validmeasurementnumber, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.validmeasurementnumber_ = validmeasurementnumber;
+  // @@protoc_insertion_point(field_set_allocated:com.example.MeasurementsMessage.validMeasurementNumber)
+}
+
+// repeated .com.example.MeasurementsMessage.MeasurementSetMessage measurementsSet = 2;
+inline int MeasurementsMessage::_internal_measurementsset_size() const {
+  return _impl_.measurementsset_.size();
+}
+inline int MeasurementsMessage::measurementsset_size() const {
+  return _internal_measurementsset_size();
+}
+inline void MeasurementsMessage::clear_measurementsset() {
+  _internal_mutable_measurementsset()->Clear();
+}
+inline ::com::example::MeasurementsMessage_MeasurementSetMessage* MeasurementsMessage::mutable_measurementsset(int index) {
+  // @@protoc_insertion_point(field_mutable:com.example.MeasurementsMessage.measurementsSet)
+  return _internal_mutable_measurementsset()->Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::com::example::MeasurementsMessage_MeasurementSetMessage >*
+MeasurementsMessage::mutable_measurementsset() {
+  // @@protoc_insertion_point(field_mutable_list:com.example.MeasurementsMessage.measurementsSet)
+  return _internal_mutable_measurementsset();
+}
+inline const ::com::example::MeasurementsMessage_MeasurementSetMessage& MeasurementsMessage::_internal_measurementsset(int index) const {
+  return _internal_measurementsset().Get(index);
+}
+inline const ::com::example::MeasurementsMessage_MeasurementSetMessage& MeasurementsMessage::measurementsset(int index) const {
+  // @@protoc_insertion_point(field_get:com.example.MeasurementsMessage.measurementsSet)
+  return _internal_measurementsset(index);
+}
+inline ::com::example::MeasurementsMessage_MeasurementSetMessage* MeasurementsMessage::_internal_add_measurementsset() {
+  return _internal_mutable_measurementsset()->Add();
+}
+inline ::com::example::MeasurementsMessage_MeasurementSetMessage* MeasurementsMessage::add_measurementsset() {
+  ::com::example::MeasurementsMessage_MeasurementSetMessage* _add = _internal_add_measurementsset();
+  // @@protoc_insertion_point(field_add:com.example.MeasurementsMessage.measurementsSet)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::com::example::MeasurementsMessage_MeasurementSetMessage >&
+MeasurementsMessage::measurementsset() const {
+  // @@protoc_insertion_point(field_list:com.example.MeasurementsMessage.measurementsSet)
+  return _internal_measurementsset();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::com::example::MeasurementsMessage_MeasurementSetMessage>&
+MeasurementsMessage::_internal_measurementsset() const {
+  return _impl_.measurementsset_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::com::example::MeasurementsMessage_MeasurementSetMessage>*
+MeasurementsMessage::_internal_mutable_measurementsset() {
+  return &_impl_.measurementsset_;
 }
 
 #ifdef __GNUC__

@@ -32,8 +32,6 @@ public:
             std::memcpy(headerAndMessage.data() + sizeof(networkOrderSize), input_message_.data(), messageSize);
             
             doWrite(headerAndMessage);
-            io_context_.run();
-            io_context_.restart();
         }
     }
 
@@ -70,7 +68,12 @@ private:
     }
 
     void doWrite(std::vector<char>& data) {
-        boost::asio::async_write(socket_, boost::asio::buffer(data), [this](boost::system::error_code ec, std::size_t) {});
+        boost::asio::async_write(socket_, boost::asio::buffer(data), [this](boost::system::error_code ec, std::size_t) {
+            if(!ec)
+            {
+                std::cout<<"Message sended\n";
+            }
+        });
     }
 
     com::example::MeasurementsMessage msg;

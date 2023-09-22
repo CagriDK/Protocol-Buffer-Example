@@ -55,13 +55,22 @@ void doReadBody(std::size_t messageSize) {
                 
                 buf_.consume(messageSize);  // Emptying used buffer
                 
-                msg.ParseFromArray(body.data(), body.size());
-                std::cout<<"== Proto message datas ==\n";
-                std::cout << "id              = " << msg.id() << "\n";
-                std::cout << "name            = " << msg.name() << "\n";
-                std::cout << "account_balance = " << msg.account_balance() << "\n";
-                std::cout << "email           = " << msg.email() << "\n";
-                std::cout << std::endl;
+                std::vector<char> t1(body.begin(),body.end());
+                msg.ParseFromArray(t1.data(),t1.size());
+
+                std::cout<<std::boolalpha<<"Proto ValidMeasurementNumber = " <<msg.validmeasurementnumber().value()<< "\n";
+
+                for(auto idx = 0; idx < msg.validmeasurementnumber().value(); idx++)
+                {
+                    std::cout<<"Proto Measurement Number == "<<idx<<"\n";
+                    std::cout<<"Proto MeasurementsSet Height = " <<msg.measurementsset(idx).height()<< "\n";
+                    std::cout<<"Proto MeasurementsSet Azimuth = " <<msg.measurementsset(idx).azimuth().value()<< "\n";
+                    std::cout<<"Proto MeasurementsSet Doppler = " <<msg.measurementsset(idx).doppler()<< "\n";
+                    std::cout<<"Proto MeasurementsSet Dopplervalid = " <<msg.measurementsset(idx).dopplervalid()<< "\n";
+                    std::cout<<"Proto MeasurementsSet Elevation = " <<msg.measurementsset(idx).elevation().value()<< "\n";
+                    std::cout<<"Proto MeasurementsSet Elevationvalid = " <<msg.measurementsset(idx).elevationvalid().value()<< "\n\n";
+                }
+
                 doReadHeader();
             } else {
                 std::cout << "Message error = " << ec.message() << std::endl;
@@ -71,7 +80,7 @@ void doReadBody(std::size_t messageSize) {
 
     tcp::socket socket_;
     boost::asio::streambuf buf_;
-    com::example::Client msg;
+    com::example::MeasurementsMessage msg;
     };
 class Server{
 public:

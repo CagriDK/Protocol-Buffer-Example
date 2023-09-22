@@ -21,80 +21,258 @@ namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace com {
 namespace example {
 template <typename>
-PROTOBUF_CONSTEXPR Client::Client(
+PROTOBUF_CONSTEXPR MeasurementsMessage_MeasurementSetMessage::MeasurementsMessage_MeasurementSetMessage(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.id_)*/ {
-    &::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized {}
-  }
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.modscallsign_)*/ {}
+  ,/* _impl_._modscallsign_cached_byte_size_ = */ { 0 }
 
-  , /*decltype(_impl_.name_)*/ {
-    &::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized {}
-  }
+  , /*decltype(_impl_.mod5callsign_)*/ {}
+  ,/* _impl_._mod5callsign_cached_byte_size_ = */ { 0 }
 
-  , /*decltype(_impl_.email_)*/ {
-    &::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized {}
-  }
+  , /*decltype(_impl_.resolution_)*/ {}
 
-  , /*decltype(_impl_.account_balance_)*/ 0
+  , /*decltype(_impl_.range_)*/nullptr
+  , /*decltype(_impl_.azimuth_)*/nullptr
+  , /*decltype(_impl_.elevation_)*/nullptr
+  , /*decltype(_impl_.elevationvalid_)*/nullptr
+  , /*decltype(_impl_.radarid_)*/nullptr
+  , /*decltype(_impl_.measurementtime_)*/nullptr
+  , /*decltype(_impl_.radardimension_)*/nullptr
+  , /*decltype(_impl_.plotid_)*/nullptr
+  , /*decltype(_impl_.height_)*/ 0
 
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct ClientDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ClientDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~ClientDefaultTypeInternal() {}
+  , /*decltype(_impl_.rcs_)*/ 0
+
+  , /*decltype(_impl_.pd_)*/ 0
+
+  , /*decltype(_impl_.plottype_)*/ 0
+
+  , /*decltype(_impl_.heightvalid_)*/ false
+
+  , /*decltype(_impl_.pdvalid_)*/ false
+
+  , /*decltype(_impl_.dopplervalid_)*/ false
+
+  , /*decltype(_impl_.qualityvalid_)*/ false
+
+  , /*decltype(_impl_.doppler_)*/ 0
+
+  , /*decltype(_impl_.strength_)*/ 0
+
+  , /*decltype(_impl_.quality_)*/ 0
+
+  , /*decltype(_impl_.snr_)*/ 0
+
+  , /*decltype(_impl_.source_)*/ 0
+
+  , /*decltype(_impl_.fusionstatus_)*/ 0
+
+  , /*decltype(_impl_.mod1_)*/ 0
+
+  , /*decltype(_impl_.mod2_)*/ 0
+
+  , /*decltype(_impl_.mod3a_)*/ 0
+
+  , /*decltype(_impl_.modc_)*/ 0
+
+  , /*decltype(_impl_.mod4_)*/ 0
+
+  , /*decltype(_impl_.modsaddress_)*/ 0
+
+  , /*decltype(_impl_.mod5address_)*/ 0
+
+  , /*decltype(_impl_.resolutionvalid_)*/ false
+
+  , /*decltype(_impl_.reliabilityvalid_)*/ false
+
+  , /*decltype(_impl_.reliability_)*/ 0
+} {}
+struct MeasurementsMessage_MeasurementSetMessageDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MeasurementsMessage_MeasurementSetMessageDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MeasurementsMessage_MeasurementSetMessageDefaultTypeInternal() {}
   union {
-    Client _instance;
+    MeasurementsMessage_MeasurementSetMessage _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ClientDefaultTypeInternal _Client_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MeasurementsMessage_MeasurementSetMessageDefaultTypeInternal _MeasurementsMessage_MeasurementSetMessage_default_instance_;
+template <typename>
+PROTOBUF_CONSTEXPR MeasurementsMessage::MeasurementsMessage(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.measurementsset_)*/{}
+  , /*decltype(_impl_.validmeasurementnumber_)*/nullptr} {}
+struct MeasurementsMessageDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MeasurementsMessageDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MeasurementsMessageDefaultTypeInternal() {}
+  union {
+    MeasurementsMessage _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MeasurementsMessageDefaultTypeInternal _MeasurementsMessage_default_instance_;
 }  // namespace example
 }  // namespace com
-static ::_pb::Metadata file_level_metadata_ServerData_2eproto[1];
+static ::_pb::Metadata file_level_metadata_ServerData_2eproto[2];
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_ServerData_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor**
     file_level_service_descriptors_ServerData_2eproto = nullptr;
 const ::uint32_t TableStruct_ServerData_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
     protodesc_cold) = {
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::com::example::Client, _internal_metadata_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
     ~0u,  // no _weak_field_map_
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::com::example::Client, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::com::example::Client, _impl_.name_),
-    PROTOBUF_FIELD_OFFSET(::com::example::Client, _impl_.account_balance_),
-    PROTOBUF_FIELD_OFFSET(::com::example::Client, _impl_.email_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.range_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.azimuth_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.elevation_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.elevationvalid_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.radarid_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.measurementtime_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.height_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.heightvalid_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.rcs_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.radardimension_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.plotid_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.pd_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.pdvalid_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.plottype_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.strength_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.doppler_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.dopplervalid_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.snr_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.quality_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.qualityvalid_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.source_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.fusionstatus_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.mod1_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.mod2_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.mod3a_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.modc_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.mod4_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.modsaddress_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.modscallsign_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.mod5address_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.mod5callsign_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.resolution_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.resolutionvalid_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.reliability_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage_MeasurementSetMessage, _impl_.reliabilityvalid_),
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    ~0u,
+    ~0u,
+    ~0u,
+    6,
+    7,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    ~0u,
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage, _impl_.validmeasurementnumber_),
+    PROTOBUF_FIELD_OFFSET(::com::example::MeasurementsMessage, _impl_.measurementsset_),
+    0,
+    ~0u,
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        { 0, -1, -1, sizeof(::com::example::Client)},
+        { 0, 43, -1, sizeof(::com::example::MeasurementsMessage_MeasurementSetMessage)},
+        { 78, 88, -1, sizeof(::com::example::MeasurementsMessage)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-    &::com::example::_Client_default_instance_._instance,
+    &::com::example::_MeasurementsMessage_MeasurementSetMessage_default_instance_._instance,
+    &::com::example::_MeasurementsMessage_default_instance_._instance,
 };
 const char descriptor_table_protodef_ServerData_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\020ServerData.proto\022\013com.example\"J\n\006Clien"
-    "t\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\027\n\017account_b"
-    "alance\030\003 \001(\005\022\r\n\005email\030\004 \001(\tb\006proto3"
+    "\n\020ServerData.proto\022\013com.example\032\036google/"
+    "protobuf/wrappers.proto\"\276\010\n\023Measurements"
+    "Message\022;\n\026validMeasurementNumber\030\001 \001(\0132"
+    "\033.google.protobuf.Int32Value\022O\n\017measurem"
+    "entsSet\030\002 \003(\01326.com.example.Measurements"
+    "Message.MeasurementSetMessage\032\230\007\n\025Measur"
+    "ementSetMessage\022+\n\005range\030\001 \001(\0132\034.google."
+    "protobuf.DoubleValue\022-\n\007azimuth\030\002 \001(\0132\034."
+    "google.protobuf.DoubleValue\022/\n\televation"
+    "\030\003 \001(\0132\034.google.protobuf.DoubleValue\0222\n\016"
+    "elevationValid\030\004 \001(\0132\032.google.protobuf.B"
+    "oolValue\022,\n\007radarId\030\005 \001(\0132\033.google.proto"
+    "buf.Int32Value\0225\n\017measurementTime\030\006 \001(\0132"
+    "\034.google.protobuf.DoubleValue\022\016\n\006height\030"
+    "\007 \001(\001\022\023\n\013heightValid\030\010 \001(\010\022\013\n\003rcs\030\t \001(\001\022"
+    "3\n\016radarDimension\030\n \001(\0132\033.google.protobu"
+    "f.Int32Value\022+\n\006plotID\030\013 \001(\0132\033.google.pr"
+    "otobuf.Int32Value\022\n\n\002pd\030\014 \001(\001\022\017\n\007pdValid"
+    "\030\r \001(\010\022\020\n\010plotType\030\016 \001(\005\022\020\n\010strength\030\017 \001"
+    "(\005\022\017\n\007doppler\030\020 \001(\001\022\024\n\014dopplerValid\030\021 \001("
+    "\010\022\013\n\003snr\030\022 \001(\001\022\017\n\007quality\030\023 \001(\005\022\024\n\014quali"
+    "tyValid\030\024 \001(\010\022\016\n\006source\030\025 \001(\005\022\024\n\014fusionS"
+    "tatus\030\026 \001(\005\022\014\n\004mod1\030\027 \001(\005\022\014\n\004mod2\030\030 \001(\005\022"
+    "\r\n\005mod3A\030\031 \001(\005\022\014\n\004modC\030\032 \001(\005\022\014\n\004mod4\030\033 \001"
+    "(\005\022\023\n\013modSAddress\030\034 \001(\005\022\030\n\014modSCallsign\030"
+    "\035 \003(\rB\002\020\001\022\023\n\013mod5Address\030\036 \001(\005\022\030\n\014mod5Ca"
+    "llsign\030\037 \003(\rB\002\020\001\022\026\n\nresolution\030  \003(\001B\002\020\001"
+    "\022\027\n\017resolutionValid\030! \001(\010\022\023\n\013reliability"
+    "\030\" \001(\001\022\030\n\020reliabilityValid\030# \001(\010b\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_ServerData_2eproto_deps[1] =
+    {
+        &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
 };
 static ::absl::once_flag descriptor_table_ServerData_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_ServerData_2eproto = {
     false,
     false,
-    115,
+    1160,
     descriptor_table_protodef_ServerData_2eproto,
     "ServerData.proto",
     &descriptor_table_ServerData_2eproto_once,
-    nullptr,
-    0,
+    descriptor_table_ServerData_2eproto_deps,
     1,
+    2,
     schemas,
     file_default_instances,
     TableStruct_ServerData_2eproto::offsets,
@@ -124,84 +302,290 @@ namespace com {
 namespace example {
 // ===================================================================
 
-class Client::_Internal {
+class MeasurementsMessage_MeasurementSetMessage::_Internal {
  public:
+  using HasBits = decltype(std::declval<MeasurementsMessage_MeasurementSetMessage>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+    8 * PROTOBUF_FIELD_OFFSET(MeasurementsMessage_MeasurementSetMessage, _impl_._has_bits_);
+  static const ::PROTOBUF_NAMESPACE_ID::DoubleValue& range(const MeasurementsMessage_MeasurementSetMessage* msg);
+  static void set_has_range(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::DoubleValue& azimuth(const MeasurementsMessage_MeasurementSetMessage* msg);
+  static void set_has_azimuth(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::DoubleValue& elevation(const MeasurementsMessage_MeasurementSetMessage* msg);
+  static void set_has_elevation(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::BoolValue& elevationvalid(const MeasurementsMessage_MeasurementSetMessage* msg);
+  static void set_has_elevationvalid(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Int32Value& radarid(const MeasurementsMessage_MeasurementSetMessage* msg);
+  static void set_has_radarid(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::DoubleValue& measurementtime(const MeasurementsMessage_MeasurementSetMessage* msg);
+  static void set_has_measurementtime(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Int32Value& radardimension(const MeasurementsMessage_MeasurementSetMessage* msg);
+  static void set_has_radardimension(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Int32Value& plotid(const MeasurementsMessage_MeasurementSetMessage* msg);
+  static void set_has_plotid(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
 };
 
-Client::Client(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+const ::PROTOBUF_NAMESPACE_ID::DoubleValue&
+MeasurementsMessage_MeasurementSetMessage::_Internal::range(const MeasurementsMessage_MeasurementSetMessage* msg) {
+  return *msg->_impl_.range_;
+}
+const ::PROTOBUF_NAMESPACE_ID::DoubleValue&
+MeasurementsMessage_MeasurementSetMessage::_Internal::azimuth(const MeasurementsMessage_MeasurementSetMessage* msg) {
+  return *msg->_impl_.azimuth_;
+}
+const ::PROTOBUF_NAMESPACE_ID::DoubleValue&
+MeasurementsMessage_MeasurementSetMessage::_Internal::elevation(const MeasurementsMessage_MeasurementSetMessage* msg) {
+  return *msg->_impl_.elevation_;
+}
+const ::PROTOBUF_NAMESPACE_ID::BoolValue&
+MeasurementsMessage_MeasurementSetMessage::_Internal::elevationvalid(const MeasurementsMessage_MeasurementSetMessage* msg) {
+  return *msg->_impl_.elevationvalid_;
+}
+const ::PROTOBUF_NAMESPACE_ID::Int32Value&
+MeasurementsMessage_MeasurementSetMessage::_Internal::radarid(const MeasurementsMessage_MeasurementSetMessage* msg) {
+  return *msg->_impl_.radarid_;
+}
+const ::PROTOBUF_NAMESPACE_ID::DoubleValue&
+MeasurementsMessage_MeasurementSetMessage::_Internal::measurementtime(const MeasurementsMessage_MeasurementSetMessage* msg) {
+  return *msg->_impl_.measurementtime_;
+}
+const ::PROTOBUF_NAMESPACE_ID::Int32Value&
+MeasurementsMessage_MeasurementSetMessage::_Internal::radardimension(const MeasurementsMessage_MeasurementSetMessage* msg) {
+  return *msg->_impl_.radardimension_;
+}
+const ::PROTOBUF_NAMESPACE_ID::Int32Value&
+MeasurementsMessage_MeasurementSetMessage::_Internal::plotid(const MeasurementsMessage_MeasurementSetMessage* msg) {
+  return *msg->_impl_.plotid_;
+}
+void MeasurementsMessage_MeasurementSetMessage::clear_range() {
+  if (_impl_.range_ != nullptr) _impl_.range_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+void MeasurementsMessage_MeasurementSetMessage::clear_azimuth() {
+  if (_impl_.azimuth_ != nullptr) _impl_.azimuth_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+void MeasurementsMessage_MeasurementSetMessage::clear_elevation() {
+  if (_impl_.elevation_ != nullptr) _impl_.elevation_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+void MeasurementsMessage_MeasurementSetMessage::clear_elevationvalid() {
+  if (_impl_.elevationvalid_ != nullptr) _impl_.elevationvalid_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+void MeasurementsMessage_MeasurementSetMessage::clear_radarid() {
+  if (_impl_.radarid_ != nullptr) _impl_.radarid_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+void MeasurementsMessage_MeasurementSetMessage::clear_measurementtime() {
+  if (_impl_.measurementtime_ != nullptr) _impl_.measurementtime_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000020u;
+}
+void MeasurementsMessage_MeasurementSetMessage::clear_radardimension() {
+  if (_impl_.radardimension_ != nullptr) _impl_.radardimension_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+void MeasurementsMessage_MeasurementSetMessage::clear_plotid() {
+  if (_impl_.plotid_ != nullptr) _impl_.plotid_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000080u;
+}
+MeasurementsMessage_MeasurementSetMessage::MeasurementsMessage_MeasurementSetMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:com.example.Client)
+  // @@protoc_insertion_point(arena_constructor:com.example.MeasurementsMessage.MeasurementSetMessage)
 }
-Client::Client(const Client& from)
+MeasurementsMessage_MeasurementSetMessage::MeasurementsMessage_MeasurementSetMessage(const MeasurementsMessage_MeasurementSetMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  Client* const _this = this; (void)_this;
+  MeasurementsMessage_MeasurementSetMessage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_) {}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.modscallsign_) { from._impl_.modscallsign_ }
+    ,/* _impl_._modscallsign_cached_byte_size_ = */ { 0 }
 
-    , decltype(_impl_.name_) {}
+    , decltype(_impl_.mod5callsign_) { from._impl_.mod5callsign_ }
+    ,/* _impl_._mod5callsign_cached_byte_size_ = */ { 0 }
 
-    , decltype(_impl_.email_) {}
+    , decltype(_impl_.resolution_) { from._impl_.resolution_ }
 
-    , decltype(_impl_.account_balance_) {}
+    , decltype(_impl_.range_){nullptr}
+    , decltype(_impl_.azimuth_){nullptr}
+    , decltype(_impl_.elevation_){nullptr}
+    , decltype(_impl_.elevationvalid_){nullptr}
+    , decltype(_impl_.radarid_){nullptr}
+    , decltype(_impl_.measurementtime_){nullptr}
+    , decltype(_impl_.radardimension_){nullptr}
+    , decltype(_impl_.plotid_){nullptr}
+    , decltype(_impl_.height_) {}
 
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.rcs_) {}
+
+    , decltype(_impl_.pd_) {}
+
+    , decltype(_impl_.plottype_) {}
+
+    , decltype(_impl_.heightvalid_) {}
+
+    , decltype(_impl_.pdvalid_) {}
+
+    , decltype(_impl_.dopplervalid_) {}
+
+    , decltype(_impl_.qualityvalid_) {}
+
+    , decltype(_impl_.doppler_) {}
+
+    , decltype(_impl_.strength_) {}
+
+    , decltype(_impl_.quality_) {}
+
+    , decltype(_impl_.snr_) {}
+
+    , decltype(_impl_.source_) {}
+
+    , decltype(_impl_.fusionstatus_) {}
+
+    , decltype(_impl_.mod1_) {}
+
+    , decltype(_impl_.mod2_) {}
+
+    , decltype(_impl_.mod3a_) {}
+
+    , decltype(_impl_.modc_) {}
+
+    , decltype(_impl_.mod4_) {}
+
+    , decltype(_impl_.modsaddress_) {}
+
+    , decltype(_impl_.mod5address_) {}
+
+    , decltype(_impl_.resolutionvalid_) {}
+
+    , decltype(_impl_.reliabilityvalid_) {}
+
+    , decltype(_impl_.reliability_) {}
+  };
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.id_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.id_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_id().empty()) {
-    _this->_impl_.id_.Set(from._internal_id(), _this->GetArenaForAllocation());
+  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+    _this->_impl_.range_ = new ::PROTOBUF_NAMESPACE_ID::DoubleValue(*from._impl_.range_);
   }
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.name_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_name().empty()) {
-    _this->_impl_.name_.Set(from._internal_name(), _this->GetArenaForAllocation());
+  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+    _this->_impl_.azimuth_ = new ::PROTOBUF_NAMESPACE_ID::DoubleValue(*from._impl_.azimuth_);
   }
-  _impl_.email_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.email_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_email().empty()) {
-    _this->_impl_.email_.Set(from._internal_email(), _this->GetArenaForAllocation());
+  if ((from._impl_._has_bits_[0] & 0x00000004u) != 0) {
+    _this->_impl_.elevation_ = new ::PROTOBUF_NAMESPACE_ID::DoubleValue(*from._impl_.elevation_);
   }
-  _this->_impl_.account_balance_ = from._impl_.account_balance_;
-  // @@protoc_insertion_point(copy_constructor:com.example.Client)
+  if ((from._impl_._has_bits_[0] & 0x00000008u) != 0) {
+    _this->_impl_.elevationvalid_ = new ::PROTOBUF_NAMESPACE_ID::BoolValue(*from._impl_.elevationvalid_);
+  }
+  if ((from._impl_._has_bits_[0] & 0x00000010u) != 0) {
+    _this->_impl_.radarid_ = new ::PROTOBUF_NAMESPACE_ID::Int32Value(*from._impl_.radarid_);
+  }
+  if ((from._impl_._has_bits_[0] & 0x00000020u) != 0) {
+    _this->_impl_.measurementtime_ = new ::PROTOBUF_NAMESPACE_ID::DoubleValue(*from._impl_.measurementtime_);
+  }
+  if ((from._impl_._has_bits_[0] & 0x00000040u) != 0) {
+    _this->_impl_.radardimension_ = new ::PROTOBUF_NAMESPACE_ID::Int32Value(*from._impl_.radardimension_);
+  }
+  if ((from._impl_._has_bits_[0] & 0x00000080u) != 0) {
+    _this->_impl_.plotid_ = new ::PROTOBUF_NAMESPACE_ID::Int32Value(*from._impl_.plotid_);
+  }
+  ::memcpy(&_impl_.height_, &from._impl_.height_,
+    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.reliability_) -
+    reinterpret_cast<char*>(&_impl_.height_)) + sizeof(_impl_.reliability_));
+  // @@protoc_insertion_point(copy_constructor:com.example.MeasurementsMessage.MeasurementSetMessage)
 }
 
-inline void Client::SharedCtor(::_pb::Arena* arena) {
+inline void MeasurementsMessage_MeasurementSetMessage::SharedCtor(::_pb::Arena* arena) {
   (void)arena;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_) {}
-
-    , decltype(_impl_.name_) {}
-
-    , decltype(_impl_.email_) {}
-
-    , decltype(_impl_.account_balance_) { 0 }
-
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.modscallsign_) { arena }
+    ,/* _impl_._modscallsign_cached_byte_size_ = */ { 0 }
+
+    , decltype(_impl_.mod5callsign_) { arena }
+    ,/* _impl_._mod5callsign_cached_byte_size_ = */ { 0 }
+
+    , decltype(_impl_.resolution_) { arena }
+
+    , decltype(_impl_.range_){nullptr}
+    , decltype(_impl_.azimuth_){nullptr}
+    , decltype(_impl_.elevation_){nullptr}
+    , decltype(_impl_.elevationvalid_){nullptr}
+    , decltype(_impl_.radarid_){nullptr}
+    , decltype(_impl_.measurementtime_){nullptr}
+    , decltype(_impl_.radardimension_){nullptr}
+    , decltype(_impl_.plotid_){nullptr}
+    , decltype(_impl_.height_) { 0 }
+
+    , decltype(_impl_.rcs_) { 0 }
+
+    , decltype(_impl_.pd_) { 0 }
+
+    , decltype(_impl_.plottype_) { 0 }
+
+    , decltype(_impl_.heightvalid_) { false }
+
+    , decltype(_impl_.pdvalid_) { false }
+
+    , decltype(_impl_.dopplervalid_) { false }
+
+    , decltype(_impl_.qualityvalid_) { false }
+
+    , decltype(_impl_.doppler_) { 0 }
+
+    , decltype(_impl_.strength_) { 0 }
+
+    , decltype(_impl_.quality_) { 0 }
+
+    , decltype(_impl_.snr_) { 0 }
+
+    , decltype(_impl_.source_) { 0 }
+
+    , decltype(_impl_.fusionstatus_) { 0 }
+
+    , decltype(_impl_.mod1_) { 0 }
+
+    , decltype(_impl_.mod2_) { 0 }
+
+    , decltype(_impl_.mod3a_) { 0 }
+
+    , decltype(_impl_.modc_) { 0 }
+
+    , decltype(_impl_.mod4_) { 0 }
+
+    , decltype(_impl_.modsaddress_) { 0 }
+
+    , decltype(_impl_.mod5address_) { 0 }
+
+    , decltype(_impl_.resolutionvalid_) { false }
+
+    , decltype(_impl_.reliabilityvalid_) { false }
+
+    , decltype(_impl_.reliability_) { 0 }
+
   };
-  _impl_.id_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.id_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.name_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.email_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.email_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-Client::~Client() {
-  // @@protoc_insertion_point(destructor:com.example.Client)
+MeasurementsMessage_MeasurementSetMessage::~MeasurementsMessage_MeasurementSetMessage() {
+  // @@protoc_insertion_point(destructor:com.example.MeasurementsMessage.MeasurementSetMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -209,74 +593,403 @@ Client::~Client() {
   SharedDtor();
 }
 
-inline void Client::SharedDtor() {
+inline void MeasurementsMessage_MeasurementSetMessage::SharedDtor() {
   ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.id_.Destroy();
-  _impl_.name_.Destroy();
-  _impl_.email_.Destroy();
+  _impl_.modscallsign_.~RepeatedField();
+  _impl_.mod5callsign_.~RepeatedField();
+  _impl_.resolution_.~RepeatedField();
+  if (this != internal_default_instance()) delete _impl_.range_;
+  if (this != internal_default_instance()) delete _impl_.azimuth_;
+  if (this != internal_default_instance()) delete _impl_.elevation_;
+  if (this != internal_default_instance()) delete _impl_.elevationvalid_;
+  if (this != internal_default_instance()) delete _impl_.radarid_;
+  if (this != internal_default_instance()) delete _impl_.measurementtime_;
+  if (this != internal_default_instance()) delete _impl_.radardimension_;
+  if (this != internal_default_instance()) delete _impl_.plotid_;
 }
 
-void Client::SetCachedSize(int size) const {
+void MeasurementsMessage_MeasurementSetMessage::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void Client::Clear() {
-// @@protoc_insertion_point(message_clear_start:com.example.Client)
+void MeasurementsMessage_MeasurementSetMessage::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.example.MeasurementsMessage.MeasurementSetMessage)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.id_.ClearToEmpty();
-  _impl_.name_.ClearToEmpty();
-  _impl_.email_.ClearToEmpty();
-  _impl_.account_balance_ = 0;
+  _internal_mutable_modscallsign()->Clear();
+  _internal_mutable_mod5callsign()->Clear();
+  _internal_mutable_resolution()->Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      ABSL_DCHECK(_impl_.range_ != nullptr);
+      _impl_.range_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      ABSL_DCHECK(_impl_.azimuth_ != nullptr);
+      _impl_.azimuth_->Clear();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      ABSL_DCHECK(_impl_.elevation_ != nullptr);
+      _impl_.elevation_->Clear();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      ABSL_DCHECK(_impl_.elevationvalid_ != nullptr);
+      _impl_.elevationvalid_->Clear();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      ABSL_DCHECK(_impl_.radarid_ != nullptr);
+      _impl_.radarid_->Clear();
+    }
+    if (cached_has_bits & 0x00000020u) {
+      ABSL_DCHECK(_impl_.measurementtime_ != nullptr);
+      _impl_.measurementtime_->Clear();
+    }
+    if (cached_has_bits & 0x00000040u) {
+      ABSL_DCHECK(_impl_.radardimension_ != nullptr);
+      _impl_.radardimension_->Clear();
+    }
+    if (cached_has_bits & 0x00000080u) {
+      ABSL_DCHECK(_impl_.plotid_ != nullptr);
+      _impl_.plotid_->Clear();
+    }
+  }
+  ::memset(&_impl_.height_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.reliability_) -
+      reinterpret_cast<char*>(&_impl_.height_)) + sizeof(_impl_.reliability_));
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Client::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* MeasurementsMessage_MeasurementSetMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     ::uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string id = 1;
+      // .google.protobuf.DoubleValue range = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_id();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_range(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "com.example.Client.id"));
         } else {
           goto handle_unusual;
         }
         continue;
-      // string name = 2;
+      // .google.protobuf.DoubleValue azimuth = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_name();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_azimuth(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "com.example.Client.name"));
         } else {
           goto handle_unusual;
         }
         continue;
-      // int32 account_balance = 3;
+      // .google.protobuf.DoubleValue elevation = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 24)) {
-          _impl_.account_balance_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_elevation(), ptr);
           CHK_(ptr);
         } else {
           goto handle_unusual;
         }
         continue;
-      // string email = 4;
+      // .google.protobuf.BoolValue elevationValid = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_email();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_elevationvalid(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "com.example.Client.email"));
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .google.protobuf.Int32Value radarId = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_radarid(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .google.protobuf.DoubleValue measurementTime = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_measurementtime(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // double height = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 57)) {
+          _impl_.height_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // bool heightValid = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 64)) {
+          _impl_.heightvalid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // double rcs = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 73)) {
+          _impl_.rcs_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .google.protobuf.Int32Value radarDimension = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 82)) {
+          ptr = ctx->ParseMessage(_internal_mutable_radardimension(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .google.protobuf.Int32Value plotID = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 90)) {
+          ptr = ctx->ParseMessage(_internal_mutable_plotid(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // double pd = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 97)) {
+          _impl_.pd_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // bool pdValid = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 104)) {
+          _impl_.pdvalid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 plotType = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 112)) {
+          _impl_.plottype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 strength = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 120)) {
+          _impl_.strength_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // double doppler = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 129)) {
+          _impl_.doppler_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // bool dopplerValid = 17;
+      case 17:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 136)) {
+          _impl_.dopplervalid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // double snr = 18;
+      case 18:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 145)) {
+          _impl_.snr_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 quality = 19;
+      case 19:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 152)) {
+          _impl_.quality_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // bool qualityValid = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 160)) {
+          _impl_.qualityvalid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 source = 21;
+      case 21:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 168)) {
+          _impl_.source_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 fusionStatus = 22;
+      case 22:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 176)) {
+          _impl_.fusionstatus_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 mod1 = 23;
+      case 23:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 184)) {
+          _impl_.mod1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 mod2 = 24;
+      case 24:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 192)) {
+          _impl_.mod2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 mod3A = 25;
+      case 25:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 200)) {
+          _impl_.mod3a_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 modC = 26;
+      case 26:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 208)) {
+          _impl_.modc_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 mod4 = 27;
+      case 27:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 216)) {
+          _impl_.mod4_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 modSAddress = 28;
+      case 28:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 224)) {
+          _impl_.modsaddress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // repeated uint32 modSCallsign = 29 [packed = true];
+      case 29:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 234)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_modscallsign(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::uint8_t>(tag) == 232) {
+          _internal_add_modscallsign(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // int32 mod5Address = 30;
+      case 30:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 240)) {
+          _impl_.mod5address_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // repeated uint32 mod5Callsign = 31 [packed = true];
+      case 31:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 250)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_mod5callsign(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::uint8_t>(tag) == 248) {
+          _internal_add_mod5callsign(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // repeated double resolution = 32 [packed = true];
+      case 32:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 2)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_resolution(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::uint8_t>(tag) == 1) {
+          _internal_add_resolution(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // bool resolutionValid = 33;
+      case 33:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 8)) {
+          _impl_.resolutionvalid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // double reliability = 34;
+      case 34:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 17)) {
+          _impl_.reliability_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // bool reliabilityValid = 35;
+      case 35:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 24)) {
+          _impl_.reliabilityvalid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
         } else {
           goto handle_unusual;
         }
@@ -297,6 +1010,7 @@ const char* Client::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -304,154 +1018,997 @@ failure:
 #undef CHK_
 }
 
-::uint8_t* Client::_InternalSerialize(
+::uint8_t* MeasurementsMessage_MeasurementSetMessage::_InternalSerialize(
     ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:com.example.Client)
+  // @@protoc_insertion_point(serialize_to_array_start:com.example.MeasurementsMessage.MeasurementSetMessage)
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string id = 1;
-  if (!this->_internal_id().empty()) {
-    const std::string& _s = this->_internal_id();
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE, "com.example.Client.id");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+  cached_has_bits = _impl_._has_bits_[0];
+  // .google.protobuf.DoubleValue range = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::range(this),
+        _Internal::range(this).GetCachedSize(), target, stream);
   }
 
-  // string name = 2;
-  if (!this->_internal_name().empty()) {
-    const std::string& _s = this->_internal_name();
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE, "com.example.Client.name");
-    target = stream->WriteStringMaybeAliased(2, _s, target);
+  // .google.protobuf.DoubleValue azimuth = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::azimuth(this),
+        _Internal::azimuth(this).GetCachedSize(), target, stream);
   }
 
-  // int32 account_balance = 3;
-  if (this->_internal_account_balance() != 0) {
+  // .google.protobuf.DoubleValue elevation = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::elevation(this),
+        _Internal::elevation(this).GetCachedSize(), target, stream);
+  }
+
+  // .google.protobuf.BoolValue elevationValid = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::elevationvalid(this),
+        _Internal::elevationvalid(this).GetCachedSize(), target, stream);
+  }
+
+  // .google.protobuf.Int32Value radarId = 5;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::radarid(this),
+        _Internal::radarid(this).GetCachedSize(), target, stream);
+  }
+
+  // .google.protobuf.DoubleValue measurementTime = 6;
+  if (cached_has_bits & 0x00000020u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::measurementtime(this),
+        _Internal::measurementtime(this).GetCachedSize(), target, stream);
+  }
+
+  // double height = 7;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_height = this->_internal_height();
+  ::uint64_t raw_height;
+  memcpy(&raw_height, &tmp_height, sizeof(tmp_height));
+  if (raw_height != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(
+        7, this->_internal_height(), target);
+  }
+
+  // bool heightValid = 8;
+  if (this->_internal_heightvalid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        8, this->_internal_heightvalid(), target);
+  }
+
+  // double rcs = 9;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_rcs = this->_internal_rcs();
+  ::uint64_t raw_rcs;
+  memcpy(&raw_rcs, &tmp_rcs, sizeof(tmp_rcs));
+  if (raw_rcs != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(
+        9, this->_internal_rcs(), target);
+  }
+
+  // .google.protobuf.Int32Value radarDimension = 10;
+  if (cached_has_bits & 0x00000040u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(10, _Internal::radardimension(this),
+        _Internal::radardimension(this).GetCachedSize(), target, stream);
+  }
+
+  // .google.protobuf.Int32Value plotID = 11;
+  if (cached_has_bits & 0x00000080u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(11, _Internal::plotid(this),
+        _Internal::plotid(this).GetCachedSize(), target, stream);
+  }
+
+  // double pd = 12;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_pd = this->_internal_pd();
+  ::uint64_t raw_pd;
+  memcpy(&raw_pd, &tmp_pd, sizeof(tmp_pd));
+  if (raw_pd != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(
+        12, this->_internal_pd(), target);
+  }
+
+  // bool pdValid = 13;
+  if (this->_internal_pdvalid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        13, this->_internal_pdvalid(), target);
+  }
+
+  // int32 plotType = 14;
+  if (this->_internal_plottype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        3, this->_internal_account_balance(), target);
+        14, this->_internal_plottype(), target);
   }
 
-  // string email = 4;
-  if (!this->_internal_email().empty()) {
-    const std::string& _s = this->_internal_email();
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE, "com.example.Client.email");
-    target = stream->WriteStringMaybeAliased(4, _s, target);
+  // int32 strength = 15;
+  if (this->_internal_strength() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        15, this->_internal_strength(), target);
+  }
+
+  // double doppler = 16;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_doppler = this->_internal_doppler();
+  ::uint64_t raw_doppler;
+  memcpy(&raw_doppler, &tmp_doppler, sizeof(tmp_doppler));
+  if (raw_doppler != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(
+        16, this->_internal_doppler(), target);
+  }
+
+  // bool dopplerValid = 17;
+  if (this->_internal_dopplervalid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        17, this->_internal_dopplervalid(), target);
+  }
+
+  // double snr = 18;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_snr = this->_internal_snr();
+  ::uint64_t raw_snr;
+  memcpy(&raw_snr, &tmp_snr, sizeof(tmp_snr));
+  if (raw_snr != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(
+        18, this->_internal_snr(), target);
+  }
+
+  // int32 quality = 19;
+  if (this->_internal_quality() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        19, this->_internal_quality(), target);
+  }
+
+  // bool qualityValid = 20;
+  if (this->_internal_qualityvalid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        20, this->_internal_qualityvalid(), target);
+  }
+
+  // int32 source = 21;
+  if (this->_internal_source() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        21, this->_internal_source(), target);
+  }
+
+  // int32 fusionStatus = 22;
+  if (this->_internal_fusionstatus() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        22, this->_internal_fusionstatus(), target);
+  }
+
+  // int32 mod1 = 23;
+  if (this->_internal_mod1() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        23, this->_internal_mod1(), target);
+  }
+
+  // int32 mod2 = 24;
+  if (this->_internal_mod2() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        24, this->_internal_mod2(), target);
+  }
+
+  // int32 mod3A = 25;
+  if (this->_internal_mod3a() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        25, this->_internal_mod3a(), target);
+  }
+
+  // int32 modC = 26;
+  if (this->_internal_modc() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        26, this->_internal_modc(), target);
+  }
+
+  // int32 mod4 = 27;
+  if (this->_internal_mod4() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        27, this->_internal_mod4(), target);
+  }
+
+  // int32 modSAddress = 28;
+  if (this->_internal_modsaddress() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        28, this->_internal_modsaddress(), target);
+  }
+
+  // repeated uint32 modSCallsign = 29 [packed = true];
+  {
+    int byte_size = _impl_._modscallsign_cached_byte_size_.Get();
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(29, _internal_modscallsign(),
+                                                 byte_size, target);
+    }
+  }
+
+  // int32 mod5Address = 30;
+  if (this->_internal_mod5address() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
+        30, this->_internal_mod5address(), target);
+  }
+
+  // repeated uint32 mod5Callsign = 31 [packed = true];
+  {
+    int byte_size = _impl_._mod5callsign_cached_byte_size_.Get();
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(31, _internal_mod5callsign(),
+                                                 byte_size, target);
+    }
+  }
+
+  // repeated double resolution = 32 [packed = true];
+  if (this->_internal_resolution_size() > 0) {
+    target = stream->WriteFixedPacked(32, _internal_resolution(), target);
+  }
+
+  // bool resolutionValid = 33;
+  if (this->_internal_resolutionvalid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        33, this->_internal_resolutionvalid(), target);
+  }
+
+  // double reliability = 34;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_reliability = this->_internal_reliability();
+  ::uint64_t raw_reliability;
+  memcpy(&raw_reliability, &tmp_reliability, sizeof(tmp_reliability));
+  if (raw_reliability != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(
+        34, this->_internal_reliability(), target);
+  }
+
+  // bool reliabilityValid = 35;
+  if (this->_internal_reliabilityvalid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        35, this->_internal_reliabilityvalid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:com.example.Client)
+  // @@protoc_insertion_point(serialize_to_array_end:com.example.MeasurementsMessage.MeasurementSetMessage)
   return target;
 }
 
-::size_t Client::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:com.example.Client)
+::size_t MeasurementsMessage_MeasurementSetMessage::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.example.MeasurementsMessage.MeasurementSetMessage)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string id = 1;
-  if (!this->_internal_id().empty()) {
-    total_size += 1 + ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-                                    this->_internal_id());
+  // repeated uint32 modSCallsign = 29 [packed = true];
+  {
+    std::size_t data_size = ::_pbi::WireFormatLite::UInt32Size(
+        this->_internal_modscallsign())
+    ;
+    _impl_._modscallsign_cached_byte_size_.Set(::_pbi::ToCachedSize(data_size));
+    std::size_t tag_size = data_size == 0
+        ? 0
+        : 2 + ::_pbi::WireFormatLite::Int32Size(
+                            static_cast<int32_t>(data_size))
+    ;
+    total_size += tag_size + data_size;
   }
 
-  // string name = 2;
-  if (!this->_internal_name().empty()) {
-    total_size += 1 + ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-                                    this->_internal_name());
+  // repeated uint32 mod5Callsign = 31 [packed = true];
+  {
+    std::size_t data_size = ::_pbi::WireFormatLite::UInt32Size(
+        this->_internal_mod5callsign())
+    ;
+    _impl_._mod5callsign_cached_byte_size_.Set(::_pbi::ToCachedSize(data_size));
+    std::size_t tag_size = data_size == 0
+        ? 0
+        : 2 + ::_pbi::WireFormatLite::Int32Size(
+                            static_cast<int32_t>(data_size))
+    ;
+    total_size += tag_size + data_size;
   }
 
-  // string email = 4;
-  if (!this->_internal_email().empty()) {
-    total_size += 1 + ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-                                    this->_internal_email());
+  // repeated double resolution = 32 [packed = true];
+  {
+    std::size_t data_size = std::size_t{8} *
+        ::_pbi::FromIntSize(this->_internal_resolution_size())
+    ;
+    std::size_t tag_size = data_size == 0
+        ? 0
+        : 2 + ::_pbi::WireFormatLite::Int32Size(
+                            static_cast<int32_t>(data_size))
+    ;
+    total_size += tag_size + data_size;
   }
 
-  // int32 account_balance = 3;
-  if (this->_internal_account_balance() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    // .google.protobuf.DoubleValue range = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.range_);
+    }
+
+    // .google.protobuf.DoubleValue azimuth = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.azimuth_);
+    }
+
+    // .google.protobuf.DoubleValue elevation = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.elevation_);
+    }
+
+    // .google.protobuf.BoolValue elevationValid = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.elevationvalid_);
+    }
+
+    // .google.protobuf.Int32Value radarId = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.radarid_);
+    }
+
+    // .google.protobuf.DoubleValue measurementTime = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.measurementtime_);
+    }
+
+    // .google.protobuf.Int32Value radarDimension = 10;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.radardimension_);
+    }
+
+    // .google.protobuf.Int32Value plotID = 11;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.plotid_);
+    }
+
+  }
+  // double height = 7;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_height = this->_internal_height();
+  ::uint64_t raw_height;
+  memcpy(&raw_height, &tmp_height, sizeof(tmp_height));
+  if (raw_height != 0) {
+    total_size += 9;
+  }
+
+  // double rcs = 9;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_rcs = this->_internal_rcs();
+  ::uint64_t raw_rcs;
+  memcpy(&raw_rcs, &tmp_rcs, sizeof(tmp_rcs));
+  if (raw_rcs != 0) {
+    total_size += 9;
+  }
+
+  // double pd = 12;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_pd = this->_internal_pd();
+  ::uint64_t raw_pd;
+  memcpy(&raw_pd, &tmp_pd, sizeof(tmp_pd));
+  if (raw_pd != 0) {
+    total_size += 9;
+  }
+
+  // int32 plotType = 14;
+  if (this->_internal_plottype() != 0) {
     total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_account_balance());
+        this->_internal_plottype());
+  }
+
+  // bool heightValid = 8;
+  if (this->_internal_heightvalid() != 0) {
+    total_size += 2;
+  }
+
+  // bool pdValid = 13;
+  if (this->_internal_pdvalid() != 0) {
+    total_size += 2;
+  }
+
+  // bool dopplerValid = 17;
+  if (this->_internal_dopplervalid() != 0) {
+    total_size += 3;
+  }
+
+  // bool qualityValid = 20;
+  if (this->_internal_qualityvalid() != 0) {
+    total_size += 3;
+  }
+
+  // double doppler = 16;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_doppler = this->_internal_doppler();
+  ::uint64_t raw_doppler;
+  memcpy(&raw_doppler, &tmp_doppler, sizeof(tmp_doppler));
+  if (raw_doppler != 0) {
+    total_size += 10;
+  }
+
+  // int32 strength = 15;
+  if (this->_internal_strength() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+        this->_internal_strength());
+  }
+
+  // int32 quality = 19;
+  if (this->_internal_quality() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_quality());
+  }
+
+  // double snr = 18;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_snr = this->_internal_snr();
+  ::uint64_t raw_snr;
+  memcpy(&raw_snr, &tmp_snr, sizeof(tmp_snr));
+  if (raw_snr != 0) {
+    total_size += 10;
+  }
+
+  // int32 source = 21;
+  if (this->_internal_source() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_source());
+  }
+
+  // int32 fusionStatus = 22;
+  if (this->_internal_fusionstatus() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_fusionstatus());
+  }
+
+  // int32 mod1 = 23;
+  if (this->_internal_mod1() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_mod1());
+  }
+
+  // int32 mod2 = 24;
+  if (this->_internal_mod2() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_mod2());
+  }
+
+  // int32 mod3A = 25;
+  if (this->_internal_mod3a() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_mod3a());
+  }
+
+  // int32 modC = 26;
+  if (this->_internal_modc() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_modc());
+  }
+
+  // int32 mod4 = 27;
+  if (this->_internal_mod4() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_mod4());
+  }
+
+  // int32 modSAddress = 28;
+  if (this->_internal_modsaddress() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_modsaddress());
+  }
+
+  // int32 mod5Address = 30;
+  if (this->_internal_mod5address() != 0) {
+    total_size += 2 + ::_pbi::WireFormatLite::Int32Size(
+                                    this->_internal_mod5address());
+  }
+
+  // bool resolutionValid = 33;
+  if (this->_internal_resolutionvalid() != 0) {
+    total_size += 3;
+  }
+
+  // bool reliabilityValid = 35;
+  if (this->_internal_reliabilityvalid() != 0) {
+    total_size += 3;
+  }
+
+  // double reliability = 34;
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_reliability = this->_internal_reliability();
+  ::uint64_t raw_reliability;
+  memcpy(&raw_reliability, &tmp_reliability, sizeof(tmp_reliability));
+  if (raw_reliability != 0) {
+    total_size += 10;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Client::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MeasurementsMessage_MeasurementSetMessage::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Client::MergeImpl
+    MeasurementsMessage_MeasurementSetMessage::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Client::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MeasurementsMessage_MeasurementSetMessage::GetClassData() const { return &_class_data_; }
 
 
-void Client::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Client*>(&to_msg);
-  auto& from = static_cast<const Client&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:com.example.Client)
+void MeasurementsMessage_MeasurementSetMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MeasurementsMessage_MeasurementSetMessage*>(&to_msg);
+  auto& from = static_cast<const MeasurementsMessage_MeasurementSetMessage&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:com.example.MeasurementsMessage.MeasurementSetMessage)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_id().empty()) {
-    _this->_internal_set_id(from._internal_id());
+  _this->_impl_.modscallsign_.MergeFrom(from._impl_.modscallsign_);
+  _this->_impl_.mod5callsign_.MergeFrom(from._impl_.mod5callsign_);
+  _this->_impl_.resolution_.MergeFrom(from._impl_.resolution_);
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_range()->::PROTOBUF_NAMESPACE_ID::DoubleValue::MergeFrom(
+          from._internal_range());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_azimuth()->::PROTOBUF_NAMESPACE_ID::DoubleValue::MergeFrom(
+          from._internal_azimuth());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_elevation()->::PROTOBUF_NAMESPACE_ID::DoubleValue::MergeFrom(
+          from._internal_elevation());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_internal_mutable_elevationvalid()->::PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(
+          from._internal_elevationvalid());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_internal_mutable_radarid()->::PROTOBUF_NAMESPACE_ID::Int32Value::MergeFrom(
+          from._internal_radarid());
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_internal_mutable_measurementtime()->::PROTOBUF_NAMESPACE_ID::DoubleValue::MergeFrom(
+          from._internal_measurementtime());
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_internal_mutable_radardimension()->::PROTOBUF_NAMESPACE_ID::Int32Value::MergeFrom(
+          from._internal_radardimension());
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_internal_mutable_plotid()->::PROTOBUF_NAMESPACE_ID::Int32Value::MergeFrom(
+          from._internal_plotid());
+    }
   }
-  if (!from._internal_name().empty()) {
-    _this->_internal_set_name(from._internal_name());
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_height = from._internal_height();
+  ::uint64_t raw_height;
+  memcpy(&raw_height, &tmp_height, sizeof(tmp_height));
+  if (raw_height != 0) {
+    _this->_internal_set_height(from._internal_height());
   }
-  if (!from._internal_email().empty()) {
-    _this->_internal_set_email(from._internal_email());
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_rcs = from._internal_rcs();
+  ::uint64_t raw_rcs;
+  memcpy(&raw_rcs, &tmp_rcs, sizeof(tmp_rcs));
+  if (raw_rcs != 0) {
+    _this->_internal_set_rcs(from._internal_rcs());
   }
-  if (from._internal_account_balance() != 0) {
-    _this->_internal_set_account_balance(from._internal_account_balance());
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_pd = from._internal_pd();
+  ::uint64_t raw_pd;
+  memcpy(&raw_pd, &tmp_pd, sizeof(tmp_pd));
+  if (raw_pd != 0) {
+    _this->_internal_set_pd(from._internal_pd());
+  }
+  if (from._internal_plottype() != 0) {
+    _this->_internal_set_plottype(from._internal_plottype());
+  }
+  if (from._internal_heightvalid() != 0) {
+    _this->_internal_set_heightvalid(from._internal_heightvalid());
+  }
+  if (from._internal_pdvalid() != 0) {
+    _this->_internal_set_pdvalid(from._internal_pdvalid());
+  }
+  if (from._internal_dopplervalid() != 0) {
+    _this->_internal_set_dopplervalid(from._internal_dopplervalid());
+  }
+  if (from._internal_qualityvalid() != 0) {
+    _this->_internal_set_qualityvalid(from._internal_qualityvalid());
+  }
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_doppler = from._internal_doppler();
+  ::uint64_t raw_doppler;
+  memcpy(&raw_doppler, &tmp_doppler, sizeof(tmp_doppler));
+  if (raw_doppler != 0) {
+    _this->_internal_set_doppler(from._internal_doppler());
+  }
+  if (from._internal_strength() != 0) {
+    _this->_internal_set_strength(from._internal_strength());
+  }
+  if (from._internal_quality() != 0) {
+    _this->_internal_set_quality(from._internal_quality());
+  }
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_snr = from._internal_snr();
+  ::uint64_t raw_snr;
+  memcpy(&raw_snr, &tmp_snr, sizeof(tmp_snr));
+  if (raw_snr != 0) {
+    _this->_internal_set_snr(from._internal_snr());
+  }
+  if (from._internal_source() != 0) {
+    _this->_internal_set_source(from._internal_source());
+  }
+  if (from._internal_fusionstatus() != 0) {
+    _this->_internal_set_fusionstatus(from._internal_fusionstatus());
+  }
+  if (from._internal_mod1() != 0) {
+    _this->_internal_set_mod1(from._internal_mod1());
+  }
+  if (from._internal_mod2() != 0) {
+    _this->_internal_set_mod2(from._internal_mod2());
+  }
+  if (from._internal_mod3a() != 0) {
+    _this->_internal_set_mod3a(from._internal_mod3a());
+  }
+  if (from._internal_modc() != 0) {
+    _this->_internal_set_modc(from._internal_modc());
+  }
+  if (from._internal_mod4() != 0) {
+    _this->_internal_set_mod4(from._internal_mod4());
+  }
+  if (from._internal_modsaddress() != 0) {
+    _this->_internal_set_modsaddress(from._internal_modsaddress());
+  }
+  if (from._internal_mod5address() != 0) {
+    _this->_internal_set_mod5address(from._internal_mod5address());
+  }
+  if (from._internal_resolutionvalid() != 0) {
+    _this->_internal_set_resolutionvalid(from._internal_resolutionvalid());
+  }
+  if (from._internal_reliabilityvalid() != 0) {
+    _this->_internal_set_reliabilityvalid(from._internal_reliabilityvalid());
+  }
+  static_assert(sizeof(::uint64_t) == sizeof(double), "Code assumes ::uint64_t and double are the same size.");
+  double tmp_reliability = from._internal_reliability();
+  ::uint64_t raw_reliability;
+  memcpy(&raw_reliability, &tmp_reliability, sizeof(tmp_reliability));
+  if (raw_reliability != 0) {
+    _this->_internal_set_reliability(from._internal_reliability());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Client::CopyFrom(const Client& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:com.example.Client)
+void MeasurementsMessage_MeasurementSetMessage::CopyFrom(const MeasurementsMessage_MeasurementSetMessage& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.example.MeasurementsMessage.MeasurementSetMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool Client::IsInitialized() const {
+bool MeasurementsMessage_MeasurementSetMessage::IsInitialized() const {
   return true;
 }
 
-void Client::InternalSwap(Client* other) {
+void MeasurementsMessage_MeasurementSetMessage::InternalSwap(MeasurementsMessage_MeasurementSetMessage* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.id_, lhs_arena,
-                                       &other->_impl_.id_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, lhs_arena,
-                                       &other->_impl_.name_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.email_, lhs_arena,
-                                       &other->_impl_.email_, rhs_arena);
-
-  swap(_impl_.account_balance_, other->_impl_.account_balance_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.modscallsign_.InternalSwap(&other->_impl_.modscallsign_);
+  _impl_.mod5callsign_.InternalSwap(&other->_impl_.mod5callsign_);
+  _impl_.resolution_.InternalSwap(&other->_impl_.resolution_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MeasurementsMessage_MeasurementSetMessage, _impl_.reliability_)
+      + sizeof(MeasurementsMessage_MeasurementSetMessage::_impl_.reliability_)
+      - PROTOBUF_FIELD_OFFSET(MeasurementsMessage_MeasurementSetMessage, _impl_.range_)>(
+          reinterpret_cast<char*>(&_impl_.range_),
+          reinterpret_cast<char*>(&other->_impl_.range_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Client::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata MeasurementsMessage_MeasurementSetMessage::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ServerData_2eproto_getter, &descriptor_table_ServerData_2eproto_once,
       file_level_metadata_ServerData_2eproto[0]);
+}
+// ===================================================================
+
+class MeasurementsMessage::_Internal {
+ public:
+  using HasBits = decltype(std::declval<MeasurementsMessage>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+    8 * PROTOBUF_FIELD_OFFSET(MeasurementsMessage, _impl_._has_bits_);
+  static const ::PROTOBUF_NAMESPACE_ID::Int32Value& validmeasurementnumber(const MeasurementsMessage* msg);
+  static void set_has_validmeasurementnumber(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+const ::PROTOBUF_NAMESPACE_ID::Int32Value&
+MeasurementsMessage::_Internal::validmeasurementnumber(const MeasurementsMessage* msg) {
+  return *msg->_impl_.validmeasurementnumber_;
+}
+void MeasurementsMessage::clear_validmeasurementnumber() {
+  if (_impl_.validmeasurementnumber_ != nullptr) _impl_.validmeasurementnumber_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+MeasurementsMessage::MeasurementsMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:com.example.MeasurementsMessage)
+}
+MeasurementsMessage::MeasurementsMessage(const MeasurementsMessage& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MeasurementsMessage* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.measurementsset_){from._impl_.measurementsset_}
+    , decltype(_impl_.validmeasurementnumber_){nullptr}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+    _this->_impl_.validmeasurementnumber_ = new ::PROTOBUF_NAMESPACE_ID::Int32Value(*from._impl_.validmeasurementnumber_);
+  }
+  // @@protoc_insertion_point(copy_constructor:com.example.MeasurementsMessage)
+}
+
+inline void MeasurementsMessage::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.measurementsset_){arena}
+    , decltype(_impl_.validmeasurementnumber_){nullptr}
+  };
+}
+
+MeasurementsMessage::~MeasurementsMessage() {
+  // @@protoc_insertion_point(destructor:com.example.MeasurementsMessage)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void MeasurementsMessage::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _internal_mutable_measurementsset()->~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.validmeasurementnumber_;
+}
+
+void MeasurementsMessage::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void MeasurementsMessage::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.example.MeasurementsMessage)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_mutable_measurementsset()->Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(_impl_.validmeasurementnumber_ != nullptr);
+    _impl_.validmeasurementnumber_->Clear();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* MeasurementsMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .google.protobuf.Int32Value validMeasurementNumber = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_validmeasurementnumber(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // repeated .com.example.MeasurementsMessage.MeasurementSetMessage measurementsSet = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_measurementsset(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* MeasurementsMessage::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.example.MeasurementsMessage)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // .google.protobuf.Int32Value validMeasurementNumber = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::validmeasurementnumber(this),
+        _Internal::validmeasurementnumber(this).GetCachedSize(), target, stream);
+  }
+
+  // repeated .com.example.MeasurementsMessage.MeasurementSetMessage measurementsSet = 2;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_measurementsset_size()); i < n; i++) {
+    const auto& repfield = this->_internal_measurementsset(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.example.MeasurementsMessage)
+  return target;
+}
+
+::size_t MeasurementsMessage::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.example.MeasurementsMessage)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .com.example.MeasurementsMessage.MeasurementSetMessage measurementsSet = 2;
+  total_size += 1UL * this->_internal_measurementsset_size();
+  for (const auto& msg : this->_internal_measurementsset()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // .google.protobuf.Int32Value validMeasurementNumber = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.validmeasurementnumber_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MeasurementsMessage::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MeasurementsMessage::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MeasurementsMessage::GetClassData() const { return &_class_data_; }
+
+
+void MeasurementsMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MeasurementsMessage*>(&to_msg);
+  auto& from = static_cast<const MeasurementsMessage&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:com.example.MeasurementsMessage)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_measurementsset()->MergeFrom(from._internal_measurementsset());
+  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+    _this->_internal_mutable_validmeasurementnumber()->::PROTOBUF_NAMESPACE_ID::Int32Value::MergeFrom(
+        from._internal_validmeasurementnumber());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void MeasurementsMessage::CopyFrom(const MeasurementsMessage& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.example.MeasurementsMessage)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MeasurementsMessage::IsInitialized() const {
+  return true;
+}
+
+void MeasurementsMessage::InternalSwap(MeasurementsMessage* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _internal_mutable_measurementsset()->InternalSwap(other->_internal_mutable_measurementsset());
+  swap(_impl_.validmeasurementnumber_, other->_impl_.validmeasurementnumber_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MeasurementsMessage::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ServerData_2eproto_getter, &descriptor_table_ServerData_2eproto_once,
+      file_level_metadata_ServerData_2eproto[1]);
 }
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace example
 }  // namespace com
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::com::example::Client*
-Arena::CreateMaybeMessage< ::com::example::Client >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::com::example::Client >(arena);
+template<> PROTOBUF_NOINLINE ::com::example::MeasurementsMessage_MeasurementSetMessage*
+Arena::CreateMaybeMessage< ::com::example::MeasurementsMessage_MeasurementSetMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::com::example::MeasurementsMessage_MeasurementSetMessage >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::example::MeasurementsMessage*
+Arena::CreateMaybeMessage< ::com::example::MeasurementsMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::com::example::MeasurementsMessage >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 // @@protoc_insertion_point(global_scope)
